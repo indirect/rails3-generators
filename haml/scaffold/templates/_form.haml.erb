@@ -1,0 +1,10 @@
+- form_for @<%= singular_name %> do |f|
+  = f.error_messages
+
+<% for attribute in attributes -%>
+  .field
+    = f.label :<%= attribute.name %>
+    = f.<%= attribute.field_type %> :<%= attribute.name %>
+<% end -%>
+  .actions
+    = f.submit 'Save'
