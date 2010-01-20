@@ -1,8 +1,9 @@
-require File.join(File.dirname(__FILE__), "..", "haml")
+require 'generators/haml'
+require 'rails/generators/named_base'
 
 module Haml
   module Generators
-    class ControllerGenerator < Base
+    class ControllerGenerator < Rails::Generators::NamedBase
       extend TemplatePath
       
       argument :actions, :type => :array, :default => [], :banner => "action action"

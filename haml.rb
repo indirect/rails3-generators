@@ -1,5 +1,3 @@
-require 'rails/generators/named_base'
-
 module Haml
   module Generators
     module TemplatePath
