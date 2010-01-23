@@ -1,5 +1,5 @@
 require 'generators/haml'
-require 'rails/generators/erb/scaffold/scaffold_generator'
+require 'generators/erb/scaffold/scaffold_generator'
 
 module Haml
   module Generators
