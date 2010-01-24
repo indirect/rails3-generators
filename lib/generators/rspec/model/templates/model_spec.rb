@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '<%= '/..' * class_nesting_depth %>/../spec_helper')
+vrequire File.expand_path(File.dirname(__FILE__) + '<%= '/..' * class_nesting_depth %>/../spec_helper')
 
 describe <%= class_name %> do
   before(:each) do
@@ -11,3 +11,4 @@ describe <%= class_name %> do
     <%= class_name %>.create!(@valid_attributes)
   end
 end
+                                                                                                    
