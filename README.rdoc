@@ -15,3 +15,5 @@ Haml: Paul Berry, Anuj Dutta, Louis T
 Factory Girl: Paul Berry
 
 Authlogic: Jeff Tucker
+
+MongoMapper: Jai-Gouk Kim
