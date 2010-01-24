@@ -5,24 +5,21 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Louis T."]
+  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T."]
   s.date = %q{2010-01-24}
   s.description = %q{Rails 3 compatible generators for RSpec, DataMapper, Haml, Factory-girl and Authlogic}
-  s.email = %q{negonicrac@gmail.com}
+  s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
-    "LICENSE",
-     "README.rdoc"
+    "README.rdoc"
   ]
   s.files = [
     ".gitignore",
-     "LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "features/support/env.rb",
      "lib/generators/authlogic.rb",
      "lib/generators/authlogic/session/session_generator.rb",
      "lib/generators/authlogic/session/templates/session.rb",
@@ -82,20 +79,13 @@ Gem::Specification.new do |s|
      "lib/generators/rspec/scaffold/templates/routing_spec.rb",
      "lib/generators/rspec/scaffold/templates/show_spec.rb",
      "lib/rails3-generators.rb",
-     "rails3-generators.gemspec",
-     "spec/rails3-generators_spec.rb",
-     "spec/spec.opts",
-     "spec/spec_helper.rb"
+     "rails3-generators.gemspec"
   ]
-  s.homepage = %q{http://github.com/negonicrac/rails3-generators}
+  s.homepage = %q{http://github.com/indirect/rails3-generators}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Rails 3 compatible generators}
-  s.test_files = [
-    "spec/rails3-generators_spec.rb",
-     "spec/spec_helper.rb"
-  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
@@ -103,14 +93,11 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
-      s.add_development_dependency(%q<cucumber>, [">= 0"])
     else
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
-      s.add_dependency(%q<cucumber>, [">= 0"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
-    s.add_dependency(%q<cucumber>, [">= 0"])
   end
 end
 
