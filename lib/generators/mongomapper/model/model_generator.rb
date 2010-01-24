@@ -1,6 +1,6 @@
 require 'generators/mongomapper'
 
-module MongoMapper 
+module Mongomapper 
   module Generators
     class ModelGenerator < Base
       argument :attributes, :type => :array, :default => [], :banner => "field:type field:type"

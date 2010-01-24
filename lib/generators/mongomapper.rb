@@ -2,7 +2,7 @@ require 'rails/generators/named_base'
 # require 'rails/generators/migration'
 require 'rails/generators/active_model'
 
-module MongoMapper
+module Mongomapper
   module Generators
     class Base < Rails::Generators::NamedBase #:nodoc:
       # include Rails::Generators::Migration
@@ -38,7 +38,7 @@ module MongoMapper
       end
 
       def self.find(klass, params=nil)
-        "#{klass}.get(#{params})"
+        "#{klass}.first(#{params})"
       end
 
       def self.build(klass, params=nil)
@@ -54,7 +54,7 @@ module MongoMapper
       end
 
       def update_attributes(params=nil)
-        "#{name}.update(#{params})"
+        "#{name}.update(#{params})"  
       end
 
       def errors
