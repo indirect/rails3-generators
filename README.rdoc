@@ -1,0 +1,11 @@
+= rails3-generators
+
+Rails 3 compatible generators for RSpec, DataMapper, Haml, Factory-girl and Authlogic
+
+== Note on Patches/Pull Requests
+
+== Contributors
+
+== Copyright
+
+Copyright (c) 2010 Louis T. See LICENSE for details.

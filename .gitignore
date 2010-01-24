@@ -1,2 +1,6 @@
-.DS_Store
-haml/scaffold/.DS_Store
+## PROJECT::GENERAL
+coverage
+rdoc
+pkg
+
+## PROJECT::SPECIFIC
