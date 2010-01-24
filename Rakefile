@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "rails3-generators"
     gem.summary = %Q{Rails 3 compatible generators}
-    gem.description = %Q{Rails 3 compatible generators for RSpec, DataMapper, Haml, Factory-girl and Authlogic}
+    gem.description = %Q{Rails 3 compatible generators for RSpec, DataMapper, Haml, Factory-girl, Authlogic, and Mongomapper}
     gem.email = "andre@arko.net"
     gem.homepage = "http://github.com/indirect/rails3-generators"
     gem.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim"]
