@@ -9,7 +9,7 @@ begin
     gem.description = %Q{Rails 3 compatible generators for RSpec, DataMapper, Haml, Factory-girl and Authlogic}
     gem.email = "andre@arko.net"
     gem.homepage = "http://github.com/indirect/rails3-generators"
-    gem.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T."]
+    gem.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
   end
   Jeweler::GemcutterTasks.new
