@@ -7,44 +7,15 @@ begin
     gem.name = "rails3-generators"
     gem.summary = %Q{Rails 3 compatible generators}
     gem.description = %Q{Rails 3 compatible generators for RSpec, DataMapper, Haml, Factory-girl and Authlogic}
-    gem.email = "negonicrac@gmail.com"
-    gem.homepage = "http://github.com/negonicrac/rails3-generators"
-    gem.authors = ["Louis T."]
+    gem.email = "andre@arko.net"
+    gem.homepage = "http://github.com/indirect/rails3-generators"
+    gem.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T."]
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    gem.add_development_dependency "cucumber", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
-
-require 'spec/rake/spectask'
-Spec::Rake::SpecTask.new(:spec) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.spec_files = FileList['spec/**/*_spec.rb']
-end
-
-Spec::Rake::SpecTask.new(:rcov) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
-end
-
-task :spec => :check_dependencies
-
-begin
-  require 'cucumber/rake/task'
-  Cucumber::Rake::Task.new(:features)
-
-  task :features => :check_dependencies
-rescue LoadError
-  task :features do
-    abort "Cucumber is not available. In order to run features, you must: sudo gem install cucumber"
-  end
-end
-
-task :default => :spec
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|

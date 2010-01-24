@@ -4,8 +4,14 @@ Rails 3 compatible generators for RSpec, DataMapper, Haml, Factory-girl and Auth
 
 == Note on Patches/Pull Requests
 
+Fork the repo, add a generator, send a pull request. Pretty simple.
+
 == Contributors
 
-== Copyright
+RSpec and DataMapper generators: Jose Valim
 
-Copyright (c) 2010 Louis T. See LICENSE for details.
+Haml: Paul Berry, Anuj Dutta, Louis T
+
+Factory Girl: Paul Berry
+
+Authlogic: Jeff Tucker
