@@ -1,11 +1,11 @@
 require 'generators/haml'
-require 'rails/generators/erb/scaffold/scaffold_generator'
+require 'generators/erb/scaffold/scaffold_generator'
 
 module Haml
   module Generators
     class ScaffoldGenerator < Erb::Generators::ScaffoldGenerator
       extend TemplatePath
-      
+
       def copy_layout_file
         return unless options[:layout]
         template "layout.haml.erb",

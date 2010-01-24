@@ -1,7 +1,7 @@
 # This file is copied to ~/spec when you run 'ruby script/generate rspec'
 # from the project root directory.
 ENV["RAILS_ENV"] ||= 'test'
-require File.dirname(__FILE__) + "/../config/environment" unless defined?(RAILS_ROOT)
+require File.dirname(__FILE__) + "/../config/environment" unless defined?(Rails.root)
 require 'spec/autorun'
 require 'spec/rails'
 
@@ -15,7 +15,7 @@ Spec::Runner.configure do |config|
   # in your config/boot.rb
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
-  config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+  config.fixture_path = Rails.root + '/spec/fixtures/'
 
   # == Fixtures
   #
@@ -34,7 +34,7 @@ Spec::Runner.configure do |config|
   #
   # You can also declare which fixtures to use (for example fixtures for test/fixtures):
   #
-  # config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+  # config.fixture_path = Rails.root + '/spec/fixtures/'
   #
   # == Mock Framework
   #
