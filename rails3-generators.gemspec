@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim"]
-  s.date = %q{2010-01-30}
+  s.date = %q{2010-02-16}
   s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, and Mongomapper}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
@@ -48,6 +48,40 @@ Gem::Specification.new do |s|
      "lib/generators/mongomapper/model/model_generator.rb",
      "lib/generators/mongomapper/model/templates/model.rb",
      "lib/generators/mongomapper/observer/observer_generator.rb",
+     "lib/generators/rspec.rb",
+     "lib/generators/rspec/controller/controller_generator.rb",
+     "lib/generators/rspec/controller/templates/controller_spec.rb",
+     "lib/generators/rspec/controller/templates/view_spec.rb",
+     "lib/generators/rspec/helper/helper_generator.rb",
+     "lib/generators/rspec/helper/templates/helper_spec.rb",
+     "lib/generators/rspec/install/install_generator.rb",
+     "lib/generators/rspec/install/templates/lib/tasks/rspec.rake",
+     "lib/generators/rspec/install/templates/script/autospec.tt",
+     "lib/generators/rspec/install/templates/script/spec.tt",
+     "lib/generators/rspec/install/templates/script/spec_server.tt",
+     "lib/generators/rspec/install/templates/spec/rcov.opts",
+     "lib/generators/rspec/install/templates/spec/spec.opts",
+     "lib/generators/rspec/install/templates/spec/spec_helper.rb",
+     "lib/generators/rspec/integration/integration_generator.rb",
+     "lib/generators/rspec/integration/templates/integration_spec.rb",
+     "lib/generators/rspec/mailer/mailer_generator.rb",
+     "lib/generators/rspec/mailer/templates/fixture",
+     "lib/generators/rspec/mailer/templates/mailer_spec.rb",
+     "lib/generators/rspec/model/model_generator.rb",
+     "lib/generators/rspec/model/templates/fixtures.yml",
+     "lib/generators/rspec/model/templates/model_spec.rb",
+     "lib/generators/rspec/observer/observer_generator.rb",
+     "lib/generators/rspec/observer/templates/observer_spec.rb",
+     "lib/generators/rspec/plugin/plugin_generator.rb",
+     "lib/generators/rspec/plugin/templates/%file_name%_spec.rb.tt",
+     "lib/generators/rspec/plugin/templates/test_helper.rb",
+     "lib/generators/rspec/scaffold/scaffold_generator.rb",
+     "lib/generators/rspec/scaffold/templates/controller_spec.rb",
+     "lib/generators/rspec/scaffold/templates/edit_spec.rb",
+     "lib/generators/rspec/scaffold/templates/index_spec.rb",
+     "lib/generators/rspec/scaffold/templates/new_spec.rb",
+     "lib/generators/rspec/scaffold/templates/routing_spec.rb",
+     "lib/generators/rspec/scaffold/templates/show_spec.rb",
      "lib/rails3-generators.rb",
      "rails3-generators.gemspec"
   ]
