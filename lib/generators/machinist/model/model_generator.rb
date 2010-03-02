@@ -7,7 +7,6 @@ module Machinist
       class_option :dir, :type => :string, :default => "test/blueprints", :desc => "The directory where the blueprints should go"
       
       def create_machinist_initializer
-        puts "Path: #{File.expand_path("config/initializers/machinist.rb", self.destination_root)}"
         return if File.exists?(File.expand_path("config/initializers/machinist.rb", self.destination_root))
         template "machinist_initializer.rb", "config/initializers/machinist.rb"
       end
