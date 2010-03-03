@@ -1,6 +1,6 @@
 # This file is copied to ~/spec when you run 'ruby script/generate rspec'
 # from the project root directory.
-ENV["Rails.env"] ||= 'test'
+ENV["RAILS_ENV"] ||= 'test'
 require File.dirname(__FILE__) + "/../config/environment" unless defined?(Rails.root)
 require 'spec/autorun'
 require 'spec/rails'
