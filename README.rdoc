@@ -17,3 +17,5 @@ Factory Girl: Paul Barry
 Authlogic: Jeff Tucker
 
 MongoMapper: Jai-Gouk Kim
+
+Machinist: Darcy Laycock
