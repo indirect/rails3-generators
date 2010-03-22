@@ -1,0 +1,9 @@
+<%= shebang %>
+gem 'test-unit', '1.2.3' if RUBY_VERSION.to_f >= 1.9
+
+puts "Loading Rails environment"
+ENV["Rails.env"] ||= 'test'
+require File.expand_path(File.dirname(__FILE__) + "/../config/environment") unless defined?(Rails.root)
+
+require 'optparse'
+require 'spec/rails/spec_server'

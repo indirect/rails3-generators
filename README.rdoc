@@ -10,9 +10,9 @@ Fork the repo, add a generator, send a pull request. Pretty simple.
 
 DataMapper generators: Jose Valim
 
-Haml: Paul Berry, Anuj Dutta, Louis T
+Haml: Paul Barry, Anuj Dutta, Louis T
 
-Factory Girl: Paul Berry
+Factory Girl: Paul Barry
 
 Authlogic: Jeff Tucker
 
