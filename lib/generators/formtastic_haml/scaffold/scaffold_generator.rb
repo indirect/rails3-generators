@@ -1,4 +1,4 @@
-require 'generators/formtastic_haml/'
+require 'generators/formtastic_haml'
 require 'generators/erb/scaffold/scaffold_generator'
 
 module FormtasticHaml
