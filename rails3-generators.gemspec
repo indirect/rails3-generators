@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.5.2"
+  s.version = "0.5.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock"]
@@ -75,40 +75,6 @@ Gem::Specification.new do |s|
      "lib/generators/mongomapper/model/templates/model.rb",
      "lib/generators/mongomapper/observer/observer_generator.rb",
      "lib/rails3-generators.rb",
-     "lib/replaced_by_lib_generators/rspec.rb",
-     "lib/replaced_by_lib_generators/rspec/controller/controller_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/controller/templates/controller_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/controller/templates/view_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/helper/helper_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/helper/templates/helper_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/install/install_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/install/templates/lib/tasks/rspec.rake",
-     "lib/replaced_by_lib_generators/rspec/install/templates/script/autospec.tt",
-     "lib/replaced_by_lib_generators/rspec/install/templates/script/spec.tt",
-     "lib/replaced_by_lib_generators/rspec/install/templates/script/spec_server.tt",
-     "lib/replaced_by_lib_generators/rspec/install/templates/spec/rcov.opts",
-     "lib/replaced_by_lib_generators/rspec/install/templates/spec/spec.opts",
-     "lib/replaced_by_lib_generators/rspec/install/templates/spec/spec_helper.rb",
-     "lib/replaced_by_lib_generators/rspec/integration/integration_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/integration/templates/integration_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/mailer/mailer_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/mailer/templates/fixture",
-     "lib/replaced_by_lib_generators/rspec/mailer/templates/mailer_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/model/model_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/model/templates/fixtures.yml",
-     "lib/replaced_by_lib_generators/rspec/model/templates/model_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/observer/observer_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/observer/templates/observer_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/plugin/plugin_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/plugin/templates/%file_name%_spec.rb.tt",
-     "lib/replaced_by_lib_generators/rspec/plugin/templates/test_helper.rb",
-     "lib/replaced_by_lib_generators/rspec/scaffold/scaffold_generator.rb",
-     "lib/replaced_by_lib_generators/rspec/scaffold/templates/controller_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/scaffold/templates/edit_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/scaffold/templates/index_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/scaffold/templates/new_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/scaffold/templates/routing_spec.rb",
-     "lib/replaced_by_lib_generators/rspec/scaffold/templates/show_spec.rb",
      "rails3-generators.gemspec"
   ]
   s.homepage = %q{http://github.com/indirect/rails3-generators}
