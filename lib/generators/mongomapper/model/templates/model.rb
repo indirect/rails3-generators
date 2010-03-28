@@ -15,7 +15,7 @@ class <%= class_name %><%= "< #{options[:parent].classify}" if options[:parent] 
   # Callbacks ::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
   # before_create :your_model_method
   # after_create :your_model_method
-  # before_upate :your_model_method
+  # before_update :your_model_method
   
 <% end -%>
 <% attributes.each do |attribute| -%>
