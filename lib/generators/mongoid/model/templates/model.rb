@@ -4,6 +4,6 @@ class <%= class_name %><%= "< #{options[:parent].classify}" if options[:parent] 
   include Mongoid::Timestamps
 <% end -%>
 <% attributes.each do |attribute| -%>
-  field :<%= attribute.name %>, <%= attribute.type_class %>
+  field :<%= attribute.name %>, :type => <%= attribute.type_class %>
 <% end -%>
 end
