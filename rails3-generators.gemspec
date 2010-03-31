@@ -74,6 +74,9 @@ Gem::Specification.new do |s|
      "lib/generators/mongomapper/model/model_generator.rb",
      "lib/generators/mongomapper/model/templates/model.rb",
      "lib/generators/mongomapper/observer/observer_generator.rb",
+     "lib/generators/mongoid.rb",
+     "lib/generators/mongoid/model/model_generator.rb",
+     "lib/generators/mongoid/model/templates/model.rb",
      "lib/rails3-generators.rb",
      "rails3-generators.gemspec"
   ]
