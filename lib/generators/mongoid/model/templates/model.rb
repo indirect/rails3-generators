@@ -2,10 +2,10 @@ class <%= class_name %><%= "< #{options[:parent].classify}" if options[:parent] 
 <% unless options[:parent] -%>
   include Mongoid::Document
   <% if options[:timestamps] %> 
-    include Mongoid::Timestamps
+  include Mongoid::Timestamps
   <% end %>
   <% if options[:versioning] %>
-    include Mongoid::Versioning
+  include Mongoid::Versioning
   <% end %>
 <% end -%>
 <% attributes.each do |attribute| -%>
