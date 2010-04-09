@@ -11,7 +11,7 @@ module Shoulda
       # nicked from nifty_scaffold
       
       def action?(name)
-         controller_actions.include? name.to_s
+         actions.include? name.to_s
        end
       
       def items_path(suffix = 'path')
