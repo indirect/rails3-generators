@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class <%= plural_name %>ControllerTest < Test::Unit::TestCase
-  <% if actions.contains('index') %>
+  <% if actions.include?('index') %>
   
   context "index action" do
     should "render index template" do
@@ -10,7 +10,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     end
   end
   <% end %>
-  <% if actions.contains('show') %>
+  <% if actions.include?('show') %>
   
   context "show action" do
     should "render show template" do
@@ -19,7 +19,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     end
   end    
   <% end %>
-  <% if actions.contains('new') %>
+  <% if actions.include?('new') %>
   
   context "new action" do
     should "render new template" do
@@ -28,7 +28,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     end
   end
   <% end %>
-  <% if actions.contains('create') %>
+  <% if actions.include?('create') %>
 
   context "create action" do
     should "render new template when model is invalid" do
@@ -44,7 +44,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     end
   end
   <% end %>
-  <% if actions.contains('edit') %>
+  <% if actions.include?('edit') %>
 
   context "edit action" do
     should "render edit template" do
@@ -53,7 +53,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     end
   end
   <% end %>
-  <% if actions.contains('update') %>
+  <% if actions.include?('update') %>
 
   context "update action" do
     should "render edit template when model is invalid" do
@@ -69,7 +69,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     end
   end
   <% end %>
-  <% if actions.contains('destroy') %>
+  <% if actions.include?('destroy') %>
 
   context "destroy action" do
     should "destroy model and redirect to index action" do
