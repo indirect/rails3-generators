@@ -13,9 +13,6 @@ module Shoulda
       def create_controller_file
         template 'controller.rb', File.join(options[:dir], "#{file_name}_controller_test.rb")
       end
-      
-      hook_for :fixture_replacement
-      
     end
   end
 end

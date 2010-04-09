@@ -9,6 +9,9 @@ module Shoulda
       def create_model_test_file
         template 'model.rb', File.join(options[:dir], "#{singular_name}_test.rb")
       end
+      
+      hook_for :fixture_replacement
+      
     end
   end
 end
