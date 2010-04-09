@@ -3,7 +3,6 @@ require 'generators/shoulda'
 module Shoulda
   module Generators
     class ControllerGenerator < Base
-      
       argument :actions, :type => :array, :default => [], :banner => "action action"
       class_option :dir, :type => :string, :default => "test/functional", :desc => "The directory where the controller tests should go"
       

@@ -11,7 +11,6 @@ module Shoulda
       end
       
       hook_for :fixture_replacement
-      
     end
   end
 end
