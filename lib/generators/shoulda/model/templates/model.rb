@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class <%= singular_name %>Test < Test::Unit::TestCase
+class <%= class_name %>Test < Test::Unit::TestCase
   should "be valid" do
-    assert <%= singular_name %>.new.valid?
+    assert <%= class_name %>.new.valid?
   end
 end
