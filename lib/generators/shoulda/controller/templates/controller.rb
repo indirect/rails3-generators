@@ -40,7 +40,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     should "redirect when model is valid" do
       <%= class_name %>.any_instance.stubs(:valid?).returns(true)
       post :create
-      assert_redirected_to <%= item_path_for_test('url') %>
+      assert_redirected_to
     end
   end
   <% end %>
@@ -65,7 +65,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     should "redirect when model is valid" do
       <%= class_name %>.any_instance.stubs(:valid?).returns(true)
       put :update, :id => <%= class_name %>.first
-      assert_redirected_to <%= item_path_for_test('url') %>
+      assert_redirected_to
     end
   end
   <% end %>
@@ -75,7 +75,7 @@ class <%= plural_name %>ControllerTest < Test::Unit::TestCase
     should "destroy model and redirect to index action" do
       <%= singular_name %> = <%= class_name %>.first
       delete :destroy, :id => <%= singular_name %>
-      assert_redirected_to <%= items_path('url') %>
+      assert_redirected_to
       assert !<%= class_name %>.exists?(<%= singular_name %>.id)
     end
   end
