@@ -1,9 +1,8 @@
 require 'generators/shoulda'
-require 'rails/generators/named_base'
 
 module Shoulda
   module Generators
-    class ControllerGenerator < Rails::Generators::NamedBase
+    class ControllerGenerator < Base
       
       argument :actions, :type => :array, :default => [], :banner => "action action"
       class_option :dir, :type => :string, :default => "test/functional", :desc => "The directory where the controller tests should go"
