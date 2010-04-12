@@ -1,5 +1,5 @@
 require 'generators/haml'
-require 'generators/erb/scaffold/scaffold_generator'
+require 'rails/generators/erb/scaffold/scaffold_generator'
 
 module Haml
   module Generators
@@ -11,12 +11,15 @@ module Haml
         template "layout.haml.erb",
                  File.join("app/views/layouts", controller_class_path, "#{controller_file_name}.html.haml")
       end
+      
+      def copy_view_files
+        views = available_views
+        views.delete("index") if options[:singleton]
 
-      protected
-
-        def copy_view(view)
+        views.each do |view|
           template "#{view}.haml.erb", File.join("app/views", controller_file_path, "#{view}.html.haml")
         end
+      end
 
     end
   end
