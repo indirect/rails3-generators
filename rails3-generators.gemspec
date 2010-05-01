@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.6.0"
+  s.version = "0.7.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Guillaume Belleguic"]
-  s.date = %q{2010-04-12}
-  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Mongoid}
+  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza"]
+  s.date = %q{2010-05-01}
+  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Shoulda}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -70,13 +70,15 @@ Gem::Specification.new do |s|
      "lib/generators/machinist/model/model_generator.rb",
      "lib/generators/machinist/model/templates/blueprint.rb",
      "lib/generators/machinist/model/templates/machinist_initializer.rb",
-     "lib/generators/mongoid.rb",
-     "lib/generators/mongoid/model/model_generator.rb",
-     "lib/generators/mongoid/model/templates/model.rb",
      "lib/generators/mongomapper.rb",
      "lib/generators/mongomapper/model/model_generator.rb",
      "lib/generators/mongomapper/model/templates/model.rb",
      "lib/generators/mongomapper/observer/observer_generator.rb",
+     "lib/generators/shoulda.rb",
+     "lib/generators/shoulda/controller/controller_generator.rb",
+     "lib/generators/shoulda/controller/templates/controller.rb",
+     "lib/generators/shoulda/model/model_generator.rb",
+     "lib/generators/shoulda/model/templates/model.rb",
      "lib/rails3-generators.rb",
      "rails3-generators.gemspec"
   ]
