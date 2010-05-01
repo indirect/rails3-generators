@@ -1,6 +1,6 @@
 = rails3-generators
 
-Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Mongoid
+Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Shoulda
 
 == Note on Patches/Pull Requests
 
@@ -20,4 +20,4 @@ MongoMapper: Jai-Gouk Kim
 
 Machinist: Darcy Laycock
 
-Mongoid: Guillaume Belleguic
+Shoulda: Peter Haza

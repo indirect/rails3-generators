@@ -6,10 +6,10 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "rails3-generators"
     gem.summary = %Q{Rails 3 compatible generators}
-    gem.description = %Q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Mongoid}
+    gem.description = %Q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Shoulda}
     gem.email = "andre@arko.net"
     gem.homepage = "http://github.com/indirect/rails3-generators"
-    gem.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Guillaume Belleguic"]
+    gem.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
   end
   Jeweler::GemcutterTasks.new
