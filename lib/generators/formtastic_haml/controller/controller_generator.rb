@@ -1,4 +1,4 @@
-require 'generators/formtastic'
+require 'generators/formtastic_haml'
 require 'rails/generators/named_base'
 
 module FormtasticHaml
