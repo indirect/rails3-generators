@@ -1,4 +1,4 @@
-require 'generators/formtastic'
+require 'generators/formtastic_haml'
 require 'rails/generators/named_base'
 
 module FormtasticHaml
@@ -16,7 +16,7 @@ module FormtasticHaml
           @action = action
           @path   = File.join(base_path, "#{action}.html.haml")
 
-          template 'view.html.haml', @path
+          template 'view.haml.erb', @path
         end
       end
     end
