@@ -1,0 +1,9 @@
+!!! 
+%html
+  %head
+    %title= "<%= controller_class_name %>:#{controller.action_name}"
+    = csrf_meta_tag
+    = stylesheet_link_tag 'scaffold'
+  %body
+    %p.notice= notice
+    = yield

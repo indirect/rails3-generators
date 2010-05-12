@@ -1,0 +1,8 @@
+Description:
+    Explain the generator
+
+Example:
+    rails generate simple_form_haml Thing
+
+    This will create:
+        what/will/it/create
