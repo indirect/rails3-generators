@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
      "lib/generators/formtastic_haml.rb",
      "lib/generators/formtastic_haml/USAGE",
      "lib/generators/formtastic_haml/controller/controller_generator.rb",
-     "lib/generators/formtastic_haml/controller/templates/view.html.haml",
+     "lib/generators/formtastic_haml/controller/templates/view.haml.erb",
      "lib/generators/formtastic_haml/scaffold/scaffold_generator.rb",
      "lib/generators/formtastic_haml/scaffold/templates/_form.haml.erb",
      "lib/generators/formtastic_haml/scaffold/templates/edit.haml.erb",
