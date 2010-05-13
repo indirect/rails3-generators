@@ -1,8 +1,20 @@
 Description:
-    Explain the generator
+    This generator creates haml views for use with the simple_form gem
+    by Plataforma Tec. It also uses the show_for gem for displaying
+    model attributes in the show.html.haml that it generates.
+    
+    Before you can use this generator you need to install both gems:
+    
+    gem install simple_form
+    gem install show_for
 
 Example:
-    rails generate simple_form_haml Thing
-
+    rails generate simple_form_haml:scaffold Thing
+    
     This will create:
-        what/will/it/create
+        app/views/things/index.html.haml
+        app/views/things/edit.html.haml
+        app/views/things/show.html.haml
+        app/views/things/new.html.haml
+        app/views/things/_form.html.haml
+        app/views/shared/_form_errors.html.haml

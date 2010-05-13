@@ -1,6 +1,6 @@
 %h1 <%= singular_name %>
 
-- show_for @<%= singular_name %> do |a| %>
+- show_for @<%= singular_name %> do |a|
 <%- for attribute in attributes -%>
   = a.attribute :<%= attribute.name %>
 <%- end -%>

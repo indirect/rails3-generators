@@ -12,6 +12,11 @@ module SimpleFormHaml
                  File.join("app/views/layouts", controller_class_path, "#{controller_file_name}.html.haml")
       end
       
+      def copy_shared_files
+        template "_form_errors.haml.erb",
+                 File.join("app/views/shared", "_form_errors.html.haml")
+      end
+      
       def copy_view_files
         views = available_views
         views.delete("index") if options[:singleton]
