@@ -1,0 +1,20 @@
+Description:
+    This generator creates erb views for use with the simple_form gem
+    by Plataforma Tec. It also uses the show_for gem for displaying
+    model attributes in the show.html.erb that it generates.
+    
+    Before you can use this generator you need to install both gems:
+    
+    gem install simple_form
+    gem install show_for
+
+Example:
+    rails generate simple_form_erb:scaffold Thing
+    
+    This will create:
+        app/views/things/index.html.erb
+        app/views/things/edit.html.erb
+        app/views/things/show.html.erb
+        app/views/things/new.html.erb
+        app/views/things/_form.html.erb
+        app/views/shared/_form_errors.html.erb

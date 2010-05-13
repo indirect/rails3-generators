@@ -1,0 +1,11 @@
+<%% simple_form_for @<%= singular_name %> do |form| %>
+  <%%= render :partial => 'shared/form_errors', :locals => { :resource => @<%= singular_name %> } %>
+
+  <%- for attribute in attributes -%>
+  <%%= form.input :<%= attribute.name %>, :label => '<%= attribute.name.titleize %>' %>
+  <%- end -%>
+
+  <div class="actions">
+    <%%= form.button :submit %>
+  </div>
+<%% end %>
