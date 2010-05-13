@@ -1,5 +1,5 @@
 require 'generators/simple_form_erb'
-require 'generators/erb/scaffold/scaffold_generator'
+require 'rails/generators/erb/scaffold/scaffold_generator'
 
 module SimpleFormErb
   module Generators
