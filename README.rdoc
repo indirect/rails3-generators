@@ -22,5 +22,5 @@ Machinist: Darcy Laycock
 
 Shoulda: Peter Haza
 
-SimpleForm Haml: Peter Gumeson
+SimpleForm: Peter Gumeson
 
