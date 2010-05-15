@@ -1,0 +1,10 @@
+<h1><%= singular_name %></h1>
+
+<%% show_for @<%= singular_name %> do |a| %>
+<%- for attribute in attributes -%>
+  <%%= a.attribute :<%= attribute.name %> %>
+<%- end -%>
+<%% end -%>
+
+<%%= link_to 'Edit', edit_<%= singular_name %>_path(@<%= singular_name %>) %> |
+<%%= link_to 'Back', <%= plural_name %>_path %>

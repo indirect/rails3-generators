@@ -1,6 +1,6 @@
 = rails3-generators
 
-Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Shoulda
+Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm
 
 == Note on Patches/Pull Requests
 
@@ -21,3 +21,6 @@ MongoMapper: Jai-Gouk Kim
 Machinist: Darcy Laycock
 
 Shoulda: Peter Haza
+
+SimpleForm: Peter Gumeson
+

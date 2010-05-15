@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.version = "0.7.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza"]
-  s.date = %q{2010-05-04}
-  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Shoulda}
+  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson"]
+  s.date = %q{2010-05-12}
+  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -79,6 +79,30 @@ Gem::Specification.new do |s|
      "lib/generators/shoulda/controller/templates/controller.rb",
      "lib/generators/shoulda/model/model_generator.rb",
      "lib/generators/shoulda/model/templates/model.rb",
+     "lib/generators/simple_form_erb.rb",
+     "lib/generators/simple_form_erb/USAGE",
+     "lib/generators/simple_form_erb/controller/controller_generator.rb",
+     "lib/generators/simple_form_erb/controller/templates/view.html.erb",
+     "lib/generators/simple_form_erb/scaffold/scaffold_generator.rb",
+     "lib/generators/simple_form_erb/scaffold/templates/_form.html.erb",
+     "lib/generators/simple_form_erb/scaffold/templates/_form_errors.html.erb",
+     "lib/generators/simple_form_erb/scaffold/templates/edit.html.erb",
+     "lib/generators/simple_form_erb/scaffold/templates/index.html.erb",
+     "lib/generators/simple_form_erb/scaffold/templates/layout.html.erb",
+     "lib/generators/simple_form_erb/scaffold/templates/new.html.erb",
+     "lib/generators/simple_form_erb/scaffold/templates/show.html.erb",
+     "lib/generators/simple_form_haml.rb",
+     "lib/generators/simple_form_haml/USAGE",
+     "lib/generators/simple_form_haml/controller/controller_generator.rb",
+     "lib/generators/simple_form_haml/controller/templates/view.html.haml",
+     "lib/generators/simple_form_haml/scaffold/scaffold_generator.rb",
+     "lib/generators/simple_form_haml/scaffold/templates/_form.haml.erb",
+     "lib/generators/simple_form_haml/scaffold/templates/_form_errors.haml.erb",
+     "lib/generators/simple_form_haml/scaffold/templates/edit.haml.erb",
+     "lib/generators/simple_form_haml/scaffold/templates/index.haml.erb",
+     "lib/generators/simple_form_haml/scaffold/templates/layout.haml.erb",
+     "lib/generators/simple_form_haml/scaffold/templates/new.haml.erb",
+     "lib/generators/simple_form_haml/scaffold/templates/show.haml.erb",
      "lib/rails3-generators.rb",
      "rails3-generators.gemspec"
   ]
