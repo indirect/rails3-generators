@@ -10,7 +10,7 @@ Fork the repo, add a generator, send a pull request. Pretty simple.
 
 DataMapper generators: Jose Valim
 
-Haml: Paul Barry, Anuj Dutta, Louis T
+Haml: Paul Barry, Anuj Dutta, Louis T, Chris Rhoden
 
 Factory Girl: Paul Barry
 
