@@ -1,9 +1,10 @@
 - semantic_form_for @<%= singular_name %> do |form|
 <%- if attributes.empty? -%>
-  - form.inputs
+  = form.inputs
 <%- else -%>
+  - form.inputs do
 <%- for attribute in attributes -%>
-  = form.input :<%= attribute.name %>, :label => '<%= attribute.name.titleize %>'
+    = form.input :<%= attribute.name.gsub(/_id$/, '') %>, :label => '<%= attribute.name.titleize %>'
 <%- end -%>
 <%- end -%>
   = form.buttons
