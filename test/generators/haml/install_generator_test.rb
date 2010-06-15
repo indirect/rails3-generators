@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'generators/haml/install/install_generator'
 
 class Haml::Generators::InstallGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
