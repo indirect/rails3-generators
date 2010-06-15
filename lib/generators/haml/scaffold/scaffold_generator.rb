@@ -6,21 +6,25 @@ module Haml
     class ScaffoldGenerator < Erb::Generators::ScaffoldGenerator
       extend TemplatePath
 
-      def copy_layout_file
-        return unless options[:layout]
-        template "layout.haml.erb",
-                 File.join("app/views/layouts", controller_class_path, "#{controller_file_name}.html.haml")
-      end
-      
       def copy_view_files
         views = available_views
         views.delete("index") if options[:singleton]
 
         views.each do |view|
-          template "#{view}.haml.erb", File.join("app/views", controller_file_path, "#{view}.html.haml")
+          filename = filename_with_extensions(view)
+          template template_filename_with_extensions(view), File.join("app/views", controller_file_path, filename)
         end
       end
 
+      protected
+
+        def handler
+          :haml
+        end
+
+        def template_filename_with_extensions(name)
+          [name, format, handler, :erb].compact.join(".")
+        end
     end
   end
 end
