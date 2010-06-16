@@ -41,4 +41,5 @@ require 'generators/formtastic/scaffold/scaffold_generator'
 require 'generators/datamapper/migration/migration_generator'
 require 'generators/datamapper/model/model_generator'
 require 'generators/datamapper/observer/observer_generator'
+require 'generators/factory_girl/model/model_generator'
 
