@@ -2,7 +2,7 @@ require 'rails/generators'
 
 Rails::Generators.hidden_namespaces << "rails"
 
-%w(active_record datamapper).each do |orm|
+%w(active_record datamapper mongomapper).each do |orm|
   Rails::Generators.hidden_namespaces <<
   [
     "#{orm}:migration",
