@@ -12,7 +12,6 @@ Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mon
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-
 == Contributors
 
 DataMapper generators: Jose Valim
@@ -30,4 +29,3 @@ Machinist: Darcy Laycock
 Shoulda: Peter Haza
 
 SimpleForm: Peter Gumeson
-
