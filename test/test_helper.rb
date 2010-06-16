@@ -35,10 +35,10 @@ require 'rails/generators/rails/controller/controller_generator'
 require 'generators/haml/install/install_generator'
 require 'generators/haml/scaffold/scaffold_generator'
 require 'generators/haml/controller/controller_generator'
-
 require 'generators/erubis/scaffold/scaffold_generator'
-
 require 'generators/simple_form/scaffold/scaffold_generator'
-
 require 'generators/formtastic/scaffold/scaffold_generator'
+require 'generators/datamapper/migration/migration_generator'
+require 'generators/datamapper/model/model_generator'
+require 'generators/datamapper/observer/observer_generator'
 
