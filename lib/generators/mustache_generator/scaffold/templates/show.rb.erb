@@ -1,0 +1,18 @@
+class <%= class_name %>Show < Mustache::Rails
+  
+  <% for attribute in attributes -%>
+  def <%= attribute.name %>
+    view.<%= attribute.name %>
+  end
+  
+  <% end -%>
+
+  def edit_path
+    edit_<%= singular_name %>_path(@<%= singular_name %>)
+  end
+  
+  def index_path
+    <%= plural_name %>_path
+  end
+  
+end

@@ -24,11 +24,8 @@ module MustacheGenerator
           @mustache_template_path   = File.join(base_mustache_template_path,
                                                 "#{action}.html.mustache")
                                               
-          # TODO Check for action in list
           create_file @mustache_view_path
           create_file @mustache_template_path
-          # template 'view.rb',            @mustache_view_path                               
-          # template 'view.html.mustache', @mustache_template_path
         end
       end
     end
