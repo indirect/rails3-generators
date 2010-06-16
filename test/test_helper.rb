@@ -40,3 +40,5 @@ require 'generators/erubis/scaffold/scaffold_generator'
 
 require 'generators/simple_form/scaffold/scaffold_generator'
 
+require 'generators/formtastic/scaffold/scaffold_generator'
+
