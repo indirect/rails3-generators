@@ -48,3 +48,5 @@ require 'generators/mongomapper/observer/observer_generator'
 
 require 'generators/factory_girl/model/model_generator'
 require 'generators/machinist/model/model_generator'
+
+require 'generators/authlogic/session/session_generator'
