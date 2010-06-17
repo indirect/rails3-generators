@@ -1,0 +1,12 @@
+class <%= plural_name %>Index < Mustache::Rails
+  
+  def <%= plural_name %>
+    view.<%= plural_name %>
+  end
+
+  def new_path
+    new_<%= singular_name %>_path()
+  end
+  
+  
+end

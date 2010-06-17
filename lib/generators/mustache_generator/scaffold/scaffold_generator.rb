@@ -14,7 +14,7 @@ module MustacheGenerator
         views.delete("index") if options[:singleton]
 
         # TODO More views!
-        supported_views = %w(show)
+        supported_views = %w(show index)
         supported_views.each do |view|
           template "#{view}.rb.erb", 
                    File.join("app/views", controller_file_path, "#{view}.rb")

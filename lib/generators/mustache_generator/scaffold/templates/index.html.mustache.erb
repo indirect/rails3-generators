@@ -1,7 +1,10 @@
-<p>Displaying <%= singular_name %></p>
+<p>Listing {{#<%= plural_name %>}}</p>
 
 <% for attribute in attributes -%>
 <p><b><%= attribute.human_name %></b>: {{<%= attribute.name %>}}</p>
 <% end -%>
 
-<a href="{{edit_path}}">Edit</a> | <a href="{{index_path}}">Back</a>
+{{/<%= plural_name %>}}
+
+
+<p><a href="{{new_path}}">New</a></p>
