@@ -32,7 +32,12 @@ module MustacheGenerator
           create_file File.join("app/templates", 
                                 controller_file_path,"#{view}.html.mustache")
         end
-        
+      end
+      
+      private
+      
+      def available_views
+        %w(index edit show new)
       end
 
     end
