@@ -103,7 +103,7 @@ rails3-generators-0.9.0
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
 
-note: if you use erb templates add the follow to your generators block take full advantage of this gem.
+note: if you use erb templates add the follow to your generators block to take full advantage of this gem.
 g.template_engine :erubis
 
 }
