@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson"]
-  s.date = %q{2010-06-19}
+  s.date = %q{2010-06-20}
   s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
@@ -59,6 +59,9 @@ Gem::Specification.new do |s|
      "lib/generators/haml/scaffold/templates/index.html.haml.erb",
      "lib/generators/haml/scaffold/templates/new.html.haml.erb",
      "lib/generators/haml/scaffold/templates/show.html.haml.erb",
+     "lib/generators/jquery.rb",
+     "lib/generators/jquery/install/install_generator.rb",
+     "lib/generators/jquery/install/templates/config/initializers/jquery.rb.tt",
      "lib/generators/machinist.rb",
      "lib/generators/machinist/model/model_generator.rb",
      "lib/generators/machinist/model/templates/blueprint.rb",
@@ -90,6 +93,7 @@ Gem::Specification.new do |s|
      "test/lib/generators/haml/controller_generator_test.rb",
      "test/lib/generators/haml/install_generator_test.rb",
      "test/lib/generators/haml/scaffold_generator_test.rb",
+     "test/lib/generators/jquery/install_generator_test.rb",
      "test/lib/generators/machinist/model_generator_test.rb",
      "test/lib/generators/mongomapper/model_generator_test.rb",
      "test/lib/generators/mongomapper/observer_generator_test.rb",
@@ -124,6 +128,7 @@ g.template_engine :erubis
      "test/lib/generators/haml/controller_generator_test.rb",
      "test/lib/generators/haml/install_generator_test.rb",
      "test/lib/generators/haml/scaffold_generator_test.rb",
+     "test/lib/generators/jquery/install_generator_test.rb",
      "test/lib/generators/machinist/model_generator_test.rb",
      "test/lib/generators/mongomapper/model_generator_test.rb",
      "test/lib/generators/mongomapper/observer_generator_test.rb",
