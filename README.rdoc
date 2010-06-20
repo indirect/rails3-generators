@@ -1,6 +1,22 @@
 = rails3-generators
 
-Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm
+Generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm
+
+== install
+
+  gem install rails3-generators
+
+and add the following to your project's Gemfile
+
+  gem 'rails3-generators'
+
+== notes
+
+To avoid overriding the rails built-in Erb template generators this project uses the namespace Erubis for *.erb templates
+
+  config.generators do |g|
+    g.template_engine  :erubis
+  end
 
 == Note on Patches/Pull Requests
  
@@ -29,3 +45,5 @@ Machinist: Darcy Laycock
 Shoulda: Peter Haza
 
 SimpleForm: Peter Gumeson
+
+and more[http://github.com/indirect/rails3-generators/contributors]
