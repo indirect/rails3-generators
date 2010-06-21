@@ -1,0 +1,39 @@
+== 0.9.1
+* enhancements
+  * added jquery:install
+  
+* optimize
+  * simplified haml:install generator.
+
+== 0.9.0
+
+* optimize
+  * simplified and clean up generators.
+  * Added erubis template engine generator to avoid fighting with rails' built-in erb template engine
+  * included Generators
+    * authlogic:session
+
+    * datamapper:migration
+    * datamapper:model
+    * datamapper:observer
+
+    * erubis:controller
+    * erubis:scaffold
+
+    * factory_girl:model
+
+    * formtastic:scaffold
+
+    * haml:controller
+    * haml:install
+    * haml:scaffold
+
+    * machinist:model
+
+    * mongomapper:model
+    * mongomapper:observer
+
+    * shoulda:controller
+    * shoulda:model
+
+    * simple_form:scaffold
