@@ -52,3 +52,6 @@ require 'generators/machinist/model/model_generator'
 require 'generators/authlogic/session/session_generator'
 
 require 'generators/jquery/install/install_generator'
+
+require 'generators/koala/install/install_generator'
+
