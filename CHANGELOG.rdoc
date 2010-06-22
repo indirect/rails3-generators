@@ -5,7 +5,7 @@
 
 == 0.9.2
 * enhancements
-  * added jquery:install
+  * added koala:install
 
 == 0.9.1
 * enhancements
