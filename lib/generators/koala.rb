@@ -7,4 +7,3 @@ module Koala
     end
   end
 end
-

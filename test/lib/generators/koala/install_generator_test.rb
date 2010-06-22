@@ -15,4 +15,3 @@ class Koala::Generators::InstallGeneratorTest < Rails::Generators::TestCase
     assert_file "app/helpers/facebook_helper.rb"
   end
 end
-
