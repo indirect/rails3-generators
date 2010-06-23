@@ -13,24 +13,13 @@ module MustacheGenerator
         views = available_views
         views.delete("index") if options[:singleton]
 
-        # TODO More views!
-        supported_views = %w(show index)
-        supported_views.each do |view|
+        views.each do |view|                  
           template "#{view}.rb.erb", 
                    File.join("app/views", controller_file_path, "#{view}.rb")
           template "#{view}.html.mustache.erb", 
                    File.join("app/templates", 
                              controller_file_path, 
                              "#{view}.html.mustache")
-        end
-        views -= supported_views
-        
-        # Until more views supported, create empty files
-        views.each do |view|                  
-          create_file File.join("app/views", 
-                                controller_file_path, "#{view}.rb")
-          create_file File.join("app/templates", 
-                                controller_file_path,"#{view}.html.mustache")
         end
       end
       

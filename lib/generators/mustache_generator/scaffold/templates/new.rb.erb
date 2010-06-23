@@ -1,0 +1,14 @@
+class <%= plural_name.camelize %>::New < Mustache::Rails
+  
+  <% for attribute in attributes -%>
+  def <%= attribute.name %>
+    <%= attribute.name %>
+  end
+  
+  <% end -%>
+  
+  def index_path
+    <%= plural_name %>_path
+  end
+  
+end
