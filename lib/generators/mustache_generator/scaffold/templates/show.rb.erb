@@ -1,8 +1,8 @@
-class <%= class_name %>Show < Mustache::Rails
+class <%= plural_name.camelize %>::Show < Mustache::Rails
   
   <% for attribute in attributes -%>
   def <%= attribute.name %>
-    view.<%= attribute.name %>
+    <%= singular_name %>.<%= attribute.name %>
   end
   
   <% end -%>

@@ -1,10 +1,13 @@
-<p>Listing {{#<%= plural_name %>}}</p>
+<p>Listing <%= plural_name.capitalize %></p>
 
-<% for attribute in attributes -%>
-<p><b><%= attribute.human_name %></b>: {{<%= attribute.name %>}}</p>
-<% end -%>
+{{#listing}}
 
-{{/<%= plural_name %>}}
+<p>
+  <% attributes.collect do |attribute| -%>
+  <b><%= attribute.human_name %></b>: {{<%= attribute.name %>}}
+<% end.join(" | ") -%>
+| <a href="{{show_path}}">Details</a></p>
 
+{{/listing}}
 
 <p><a href="{{new_path}}">New</a></p>
