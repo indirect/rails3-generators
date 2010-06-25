@@ -1,0 +1,14 @@
+<p>New <%= singular_name.capitalize %></p>
+
+{{{errors_display_div}}}
+
+<hr />
+{{{new_form_tag}}}
+<p><% for attribute in attributes -%>
+{{{<%= attribute.name %>_label}}}: {{{<%= attribute.name %>_text_field}}}<br />
+<% end -%></p>
+  {{{form_submit}}}
+</form>
+<hr />
+
+<a href="{{index_path}}">Back to listing</a>

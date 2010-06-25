@@ -1,7 +1,7 @@
-require 'generators/mustache_generator'
+require 'generators/mustache'
 require 'rails/generators/erb/scaffold/scaffold_generator'
 
-module MustacheGenerator
+class Mustache
   module Generators
     class ScaffoldGenerator < Erb::Generators::ScaffoldGenerator
       extend TemplatePath

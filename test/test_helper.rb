@@ -33,8 +33,8 @@ require 'rails/generators/rails/scaffold/scaffold_generator'
 require 'rails/generators/rails/controller/controller_generator'
 
 # require 'generators/mustache/install/install_generator'
-require 'generators/mustache_generator/scaffold/scaffold_generator'
-require 'generators/mustache_generator/controller/controller_generator'
+require 'generators/mustache/scaffold/scaffold_generator'
+require 'generators/mustache/controller/controller_generator'
 
 require 'generators/haml/install/install_generator'
 require 'generators/haml/scaffold/scaffold_generator'

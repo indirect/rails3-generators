@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class MustacheGenerator::Generators::ControllerGeneratorTest < Rails::Generators::TestCase
+class Mustache::Generators::ControllerGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
   tests Rails::Generators::ControllerGenerator
-  arguments %w(Account foo bar --template-engine mustache_generator)
+  arguments %w(Account foo bar --template-engine mustache)
 
   setup :prepare_destination
   setup :copy_routes

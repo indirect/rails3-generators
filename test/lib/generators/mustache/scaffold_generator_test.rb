@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class MustacheGenerator::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
+class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
   tests Rails::Generators::ScaffoldGenerator
-  arguments %w(product_line title:string price:integer --template-engine mustache_generator)
+  arguments %w(product_line title:string price:integer --template-engine mustache)
 
   setup :prepare_destination
   setup :copy_routes
@@ -26,12 +26,12 @@ class MustacheGenerator::Generators::ScaffoldGeneratorTest < Rails::Generators::
                 %r({{price}})
   end
   
-  test "should place loop tags in the mustache template for index action" do
+  test "should place 'listing' loop tags in the mustache template for index action" do
     run_generator
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{#product_lines}})
+                %r({{#listing}})
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{/product_lines}})
+                %r({{/listing}})
   end
   
 end

@@ -1,7 +1,7 @@
-require 'generators/mustache_generator'
+require 'generators/mustache'
 require 'rails/generators/named_base'
 
-module MustacheGenerator
+class Mustache
   module Generators
     class ControllerGenerator < Rails::Generators::NamedBase
       extend TemplatePath
