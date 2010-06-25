@@ -12,7 +12,7 @@ def errors_display_div
     end
   end
   
-def new_form_tag
+def <%= singular_name %>_form_tag
     form_tag(create_path, :class => "<%= singular_name %>_form", :id => "edit_<%= singular_name %>_#{<%= singular_name %>.id}_form")
   end
   

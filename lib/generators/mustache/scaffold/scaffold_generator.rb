@@ -21,6 +21,10 @@ class Mustache
                              controller_file_path, 
                              "#{view}.html.mustache")
         end
+        template "_form.html.mustache.erb", 
+                   File.join("app/templates", 
+                             controller_file_path, 
+                             "_form.html.mustache")
       end
       
       private

@@ -13,6 +13,11 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
     %w(index edit new show).each { |view| assert_file "app/views/product_lines/#{view}.rb" }
   end
   
+  test "should generate a form partial mustache template" do
+    run_generator
+    assert_file "app/templates/product_lines/_form.html.mustache"
+  end
+  
   test "should generate mustache templates for each action" do
     run_generator
     %w(index edit new show).each { |view| assert_file "app/templates/product_lines/#{view}.html.mustache" }
@@ -95,13 +100,27 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   end
   
   
+  ### FORM partial
+  
+  test "should place attribute tags in the mustache template for form partial" do
+    run_generator
+    assert_file "app/templates/product_lines/_form.html.mustache",
+                %r({{title_label}})
+    assert_file "app/templates/product_lines/_form.html.mustache",
+                %r({{title_text_field}})
+    assert_file "app/templates/product_lines/_form.html.mustache",
+                %r({{price_text_field}})
+    assert_file "app/templates/product_lines/_form.html.mustache",
+                %r({{price_label}})
+  end
+  
   
   ### NEW
   
   test "should place a method that returns a form tag to create item" do
     run_generator
     assert_file "app/views/product_lines/new.rb",
-                %r(new_form_tag\s*form_tag\(create_path,)
+                %r(def product_line_form_tag\s*form_tag\(create_path,)
   end
   
   test "should place label and form input methods for each item attribute in the new view" do
@@ -128,19 +147,7 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   test "should place a new form tag in the mustache template for new action" do
     run_generator
     assert_file "app/templates/product_lines/new.html.mustache",
-                %r({{new_form_tag}})
-  end
-  
-  test "should place attribute tags in the mustache template for new action" do
-    run_generator
-    assert_file "app/templates/product_lines/new.html.mustache",
-                %r({{title_label}})
-    assert_file "app/templates/product_lines/new.html.mustache",
-                %r({{title_text_field}})
-    assert_file "app/templates/product_lines/new.html.mustache",
-                %r({{price_text_field}})
-    assert_file "app/templates/product_lines/new.html.mustache",
-                %r({{price_label}})
+                %r({{product_line_form_tag}})
   end
   
   test "should place tags for index path in the mustache template for new action" do
@@ -155,7 +162,7 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   test "should place a method that returns a form tag to update item in the edit view" do
     run_generator
     assert_file "app/views/product_lines/edit.rb",
-                %r(edit_form_tag\s*form_tag\(update_path,)
+                %r(def product_line_form_tag\s*form_tag\(update_path,)
   end
   
   test "should place label and form input methods for each item attribute in the edit view" do
@@ -179,22 +186,10 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   end
   
   
-  test "should place an edit form tag in the mustache template for edit action" do
+  test "should place a form tag in the mustache template for edit action" do
     run_generator
     assert_file "app/templates/product_lines/edit.html.mustache",
-                %r({{edit_form_tag}})
-  end
-  
-  test "should place attribute tags in the mustache template for edit action" do
-    run_generator
-    assert_file "app/templates/product_lines/edit.html.mustache",
-                %r({{title_label}})
-    assert_file "app/templates/product_lines/edit.html.mustache",
-                %r({{title_text_field}})
-    assert_file "app/templates/product_lines/edit.html.mustache",
-                %r({{price_text_field}})
-    assert_file "app/templates/product_lines/edit.html.mustache",
-                %r({{price_label}})
+                %r({{product_line_form_tag}})
   end
   
   test "should place tags for show path in the mustache template for edit action" do

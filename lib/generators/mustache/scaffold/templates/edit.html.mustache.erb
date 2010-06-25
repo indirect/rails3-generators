@@ -3,11 +3,8 @@
 {{{errors_display_div}}}
 
 <hr />
-{{{edit_form_tag}}}
-<p><% for attribute in attributes -%>
-{{{<%= attribute.name %>_label}}}: {{{<%= attribute.name %>_text_field}}}<br />
-<% end -%></p>
-  {{{form_submit}}}
+{{{<%= singular_name %>_form_tag}}}
+{{> form }}
 </form>
 <hr />
 <a href="{{show_path}}">Back to record</a>
