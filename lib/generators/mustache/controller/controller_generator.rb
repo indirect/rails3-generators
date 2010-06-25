@@ -3,7 +3,7 @@ require 'rails/generators/named_base'
 
 class Mustache
   module Generators
-    class ControllerGenerator < Rails::Generators::NamedBase
+    class ControllerGenerator < ::Rails::Generators::NamedBase
       extend TemplatePath
       
       argument :actions, :type => :array, :default => [], :banner => "action action"

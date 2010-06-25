@@ -14,12 +14,12 @@ class Mustache::Generators::ControllerGeneratorTest < Rails::Generators::TestCas
     assert_file "app/views/account/bar.rb"
   end
 
-  test "should generate mustache views as classes with distinguishing names extending Mustache::Rails" do
+  test "should generate mustache views as classes with scoped names extending Mustache::Rails" do
     run_generator
     assert_file "app/views/account/foo.rb", 
-                %r(class FooView < Mustache::Rails)
+                %r(class Account::Foo < Mustache::Rails)
     assert_file "app/views/account/bar.rb",
-                %r(class BarView < Mustache::Rails)
+                %r(class Account::Bar < Mustache::Rails)
   end
   
   test "should generate mustache template files" do
