@@ -1,0 +1,10 @@
+<p>Editing <%= singular_name.capitalize %></p>
+
+{{{errors_display_div}}}
+
+<hr />
+{{{<%= singular_name %>_form_tag}}}
+{{> form }}
+</form>
+<hr />
+<a href="{{show_path}}">Back to record</a>

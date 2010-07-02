@@ -54,4 +54,11 @@ end
   ]
 end
 
+Rails::Generators.hidden_namespaces <<
+  [
+    "mustache:controller",
+    "mustache:scaffold",
+    "mustache:install"
+  ]
+
 Rails::Generators.hidden_namespaces.flatten!

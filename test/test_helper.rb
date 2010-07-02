@@ -32,6 +32,10 @@ end
 require 'rails/generators/rails/scaffold/scaffold_generator'
 require 'rails/generators/rails/controller/controller_generator'
 
+# require 'generators/mustache/install/install_generator'
+require 'generators/mustache/scaffold/scaffold_generator'
+require 'generators/mustache/controller/controller_generator'
+
 require 'generators/haml/install/install_generator'
 require 'generators/haml/scaffold/scaffold_generator'
 require 'generators/haml/controller/controller_generator'
@@ -52,6 +56,3 @@ require 'generators/machinist/model/model_generator'
 require 'generators/authlogic/session/session_generator'
 
 require 'generators/jquery/install/install_generator'
-
-require 'generators/koala/install/install_generator'
-
