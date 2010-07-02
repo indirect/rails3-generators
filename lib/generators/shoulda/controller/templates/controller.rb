@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class <%= plural_name %>ControllerTest < ActionController::TestCase
-  <% if actions.include?('index') %>
+class <%= class_name %>ControllerTest < ActionController::TestCase
+  <% if actions.include?('index') -%>
   
   context "index action" do
     should "render index template" do
@@ -9,8 +9,8 @@ class <%= plural_name %>ControllerTest < ActionController::TestCase
       assert_template 'index'
     end
   end
-  <% end %>
-  <% if actions.include?('show') %>
+  <% end -%>
+  <% if actions.include?('show') -%>
   
   context "show action" do
     should "render show template" do
@@ -18,8 +18,8 @@ class <%= plural_name %>ControllerTest < ActionController::TestCase
       assert_template 'show'
     end
   end    
-  <% end %>
-  <% if actions.include?('new') %>
+  <% end -%>
+  <% if actions.include?('new') -%>
   
   context "new action" do
     should "render new template" do
@@ -27,8 +27,8 @@ class <%= plural_name %>ControllerTest < ActionController::TestCase
       assert_template 'new'
     end
   end
-  <% end %>
-  <% if actions.include?('create') %>
+  <% end -%>
+  <% if actions.include?('create') -%>
 
   context "create action" do
     should "render new template when model is invalid" do
@@ -43,8 +43,8 @@ class <%= plural_name %>ControllerTest < ActionController::TestCase
       assert_redirected_to
     end
   end
-  <% end %>
-  <% if actions.include?('edit') %>
+  <% end -%>
+  <% if actions.include?('edit') -%>
 
   context "edit action" do
     should "render edit template" do
@@ -52,8 +52,8 @@ class <%= plural_name %>ControllerTest < ActionController::TestCase
       assert_template 'edit'
     end
   end
-  <% end %>
-  <% if actions.include?('update') %>
+  <% end -%>
+  <% if actions.include?('update') -%>
 
   context "update action" do
     should "render edit template when model is invalid" do
@@ -68,8 +68,8 @@ class <%= plural_name %>ControllerTest < ActionController::TestCase
       assert_redirected_to
     end
   end
-  <% end %>
-  <% if actions.include?('destroy') %>
+  <% end -%>
+  <% if actions.include?('destroy') -%>
 
   context "destroy action" do
     should "destroy model and redirect to index action" do
@@ -79,6 +79,6 @@ class <%= plural_name %>ControllerTest < ActionController::TestCase
       assert !<%= class_name %>.exists?(<%= singular_name %>.id)
     end
   end
-  <% end %>
+  <% end -%>
   
 end
