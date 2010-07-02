@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class <%= plural_name %>ControllerTest < ActionController::TestCase
+class <%= class_name %>ControllerTest < ActionController::TestCase
   <% if actions.include?('index') %>
   
   context "index action" do
