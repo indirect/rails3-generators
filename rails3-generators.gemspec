@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.9.2"
+  s.version = "0.10.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson"]
-  s.date = %q{2010-06-22}
+  s.date = %q{2010-07-02}
   s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
@@ -77,12 +77,13 @@ Gem::Specification.new do |s|
      "lib/generators/mongomapper/model/templates/model.rb",
      "lib/generators/mongomapper/observer/observer_generator.rb",
      "lib/generators/mustache.rb",
+     "lib/generators/mustache/README.md",
      "lib/generators/mustache/controller/controller_generator.rb",
      "lib/generators/mustache/controller/templates/view.html.mustache.erb",
      "lib/generators/mustache/controller/templates/view.rb.erb",
      "lib/generators/mustache/install/install_generator.rb",
      "lib/generators/mustache/install/templates/config/initializers/mustache.rb",
-     "lib/generators/mustache/install/templates/lib/mustache_rails.rb", # Provisional template handler
+     "lib/generators/mustache/install/templates/lib/mustache_rails.rb",
      "lib/generators/mustache/scaffold/scaffold_generator.rb",
      "lib/generators/mustache/scaffold/templates/_form.html.mustache.erb",
      "lib/generators/mustache/scaffold/templates/edit.html.mustache.erb",
@@ -121,12 +122,15 @@ Gem::Specification.new do |s|
      "test/lib/generators/machinist/model_generator_test.rb",
      "test/lib/generators/mongomapper/model_generator_test.rb",
      "test/lib/generators/mongomapper/observer_generator_test.rb",
+     "test/lib/generators/mustache/controller_generator_test.rb",
+     "test/lib/generators/mustache/scaffold_generator_test.rb",
+     "test/lib/generators/shoulda/controller_generator_test.rb",
      "test/lib/generators/simple_form/scaffold_generators_test.rb",
      "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/indirect/rails3-generators}
   s.post_install_message = %q{
-rails3-generators-0.9.2
+rails3-generators-0.10.0
 
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
@@ -157,6 +161,9 @@ g.template_engine :erubis
      "test/lib/generators/machinist/model_generator_test.rb",
      "test/lib/generators/mongomapper/model_generator_test.rb",
      "test/lib/generators/mongomapper/observer_generator_test.rb",
+     "test/lib/generators/mustache/controller_generator_test.rb",
+     "test/lib/generators/mustache/scaffold_generator_test.rb",
+     "test/lib/generators/shoulda/controller_generator_test.rb",
      "test/lib/generators/simple_form/scaffold_generators_test.rb",
      "test/test_helper.rb"
   ]
