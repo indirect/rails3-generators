@@ -38,7 +38,7 @@ end
   ]
 end
 
-%w(erb erubis haml).each do |template|
+%w(erb erubis haml mustache).each do |template|
   Rails::Generators.hidden_namespaces <<
   [
     "#{template}:controller",
@@ -53,12 +53,5 @@ end
     "#{form_builder}:scaffold"
   ]
 end
-
-Rails::Generators.hidden_namespaces <<
-  [
-    "mustache:controller",
-    "mustache:scaffold",
-    "mustache:install"
-  ]
 
 Rails::Generators.hidden_namespaces.flatten!
