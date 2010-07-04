@@ -4,6 +4,10 @@
 * Datamapper Tests
 * Mongomapper Tests
 
+== Master
+* optimize
+  * add --extenstion option to machinist blueprints. (I like using ".blueprint". --Louis T.)
+
 == 0.10.1
 * optimize
   * move mustache generators to correct hidden_namespaces location. (mustache:install was being hidden)
