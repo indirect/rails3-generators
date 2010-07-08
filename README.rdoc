@@ -40,9 +40,9 @@ Authlogic: Jeff Tucker
 
 Mongomapper: Jai-Gouk Kim
 
-MongoMapper: Kristian Mandrup (for 0.8)
+MongoMapper: Kristian Mandrup (for 0.8) - needs testing
 
-Mongoid: Kristian Mandrup (for 2.0.beta)
+Mongoid: Kristian Mandrup (for 2.0.beta) - needs testing
 
 Machinist: Darcy Laycock
 

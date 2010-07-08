@@ -7,7 +7,9 @@ class MongoMapper::Generators::ObserverGeneratorTest < Rails::Generators::TestCa
   setup :prepare_destination
   setup :copy_routes
 
-  test "invoke" do
-    flunk "I don't use Mongo Mapper. If you use it please add tests."
+  test "invoke with name Account" do
+    name = 'account'
+    run_generator name
+    File.join('app/models', name, "#{name}_observer.rb")
   end
 end

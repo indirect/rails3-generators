@@ -8,6 +8,10 @@ class Mongoid::Generators::SetupGeneratorTest < Rails::Generators::TestCase
   setup :copy_routes
 
   test "invoke" do
-    flunk "I don't use Mongoid. If you use it please add tests."
+    run_generator
+
+    assert_file "config/initializers/mongoid.rb" do |initializer|
+      assert_match /Mongo::Connection.new(\S+)/, initializer
+    end
   end
 end

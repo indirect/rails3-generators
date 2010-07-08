@@ -13,7 +13,7 @@ module Datamapper
       class_option :parent,     :type => :string, :desc => "The parent class for the generated model"
 
       def create_migration_file
-        if options[:migration] && options[:parent].nil?
+        if migration? && parent?
           file_name = "create_#{file_path.gsub(/\//, '_').pluralize}"
           migration_template "migration.rb", "db/migrate/#{file_name}.rb"
         end
@@ -23,6 +23,28 @@ module Datamapper
         template 'model.rb', File.join('app/models', class_path, "#{file_name}.rb")
       end
 
+      protected
+
+      def migration?
+        options[:migration]
+      end        
+      
+      def timestamps?
+        options[:timestamps]
+      end
+
+      def parent?
+        options[:parent]
+      end
+      
+      def timestamp_statements
+        %q{
+  property :created_at, DateTime
+  # property :created_on, Date
+ 
+  property :updated_at, DateTime
+  # property :updated_on, Date
+}
       hook_for :test_framework
     end
   end
