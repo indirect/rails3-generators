@@ -12,6 +12,10 @@
 * optimize
   * move mustache generators to correct hidden_namespaces location. (mustache:install was being hidden)
 
+Kristian Mandrup, July 8 2010
+* Added new mongo_mapper generator for mongo mapper 0.8 with lots of extra features (needs testing!)
+* Added mongoid generator for mongoid 2.0.beta with features similar to new mongo_mapper (also needs testing!)
+
 == 0.10.0
 * enhancements
   * added mustache:install

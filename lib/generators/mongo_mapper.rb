@@ -2,14 +2,14 @@ require 'rails/generators/named_base'
 # require 'rails/generators/migration'
 require 'rails/generators/active_model'
 
-module Mongomapper
+module MongoMapper
   module Generators
     class Base < Rails::Generators::NamedBase #:nodoc:
       # include Rails::Generators::Migration
 
       def self.source_root
         @_mongomapper_source_root ||= File.expand_path(File.join(File.dirname(__FILE__),
-                                                      'mongomapper', generator_name, 'templates'))
+                                                      'mongo_mapper', generator_name, 'templates'))
       end
 
       protected

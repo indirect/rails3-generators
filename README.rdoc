@@ -38,7 +38,11 @@ Factory Girl: Paul Barry
 
 Authlogic: Jeff Tucker
 
-MongoMapper: Jai-Gouk Kim
+Mongomapper: Jai-Gouk Kim
+
+MongoMapper: Kristian Mandrup (for 0.8)
+
+Mongoid: Kristian Mandrup (for 2.0.beta)
 
 Machinist: Darcy Laycock
 

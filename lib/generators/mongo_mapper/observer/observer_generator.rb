@@ -1,6 +1,6 @@
 require 'generators/mongomapper'
 
-module Mongomapper
+module MongoMapper
   module Generators
     class ObserverGenerator < Base
       check_class_collision :suffix => "Observer"
