@@ -1,0 +1,66 @@
+== TODO
+* Grow Mustache up.(fix the TODOs and move the source to a mustache-rails like gem)
+* Write some documentation. (In both the github wiki and the source code)
+* Datamapper Tests
+* Mongomapper Tests
+
+== Master
+* optimize
+  * add --extenstion option to machinist blueprints. (I like using ".blueprint". --Louis T.)
+
+== 0.10.1
+* optimize
+  * move mustache generators to correct hidden_namespaces location. (mustache:install was being hidden)
+
+== 0.10.0
+* enhancements
+  * added mustache:install
+  * added mustache:controller
+  * added mustache:scaffold
+  
+* fix
+  * fixed shoulda controller CamelCase problem.
+
+== 0.9.2
+* enhancements
+  * added koala:install
+
+== 0.9.1
+* enhancements
+  * added jquery:install
+  
+* optimize
+  * simplified haml:install generator.
+
+== 0.9.0
+
+* optimize
+  * simplified and clean up generators.
+  * Added erubis template engine generator to avoid fighting with rails' built-in erb template engine
+  * included Generators
+    * authlogic:session
+
+    * datamapper:migration
+    * datamapper:model
+    * datamapper:observer
+
+    * erubis:controller
+    * erubis:scaffold
+
+    * factory_girl:model
+
+    * formtastic:scaffold
+
+    * haml:controller
+    * haml:install
+    * haml:scaffold
+
+    * machinist:model
+
+    * mongomapper:model
+    * mongomapper:observer
+
+    * shoulda:controller
+    * shoulda:model
+
+    * simple_form:scaffold

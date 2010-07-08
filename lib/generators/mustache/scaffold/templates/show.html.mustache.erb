@@ -1,0 +1,7 @@
+<p>Displaying <%= singular_name.capitalize %></p>
+
+<% for attribute in attributes -%>
+<p><b><%= attribute.human_name %></b>: {{<%= attribute.name %>}}</p>
+<% end -%>
+
+<a href="{{edit_path}}">Edit</a> | <a href="{{index_path}}">Back</a>

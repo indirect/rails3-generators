@@ -1,0 +1,53 @@
+class <%= plural_name.camelize %>::Edit < Mustache::Rails
+
+  <%# TODO: extract errors_display settings to to module methods -%>
+def errors_display_div
+    return "" unless <%= singular_name %>.errors.any?
+    content_tag("div", :id=>"errorExplanation", :class=>"errorExplanation") do
+      content_tag("h2", error_header) + content_tag("ul") do 
+        <%= singular_name %>.errors.full_messages.inject("") do |memo,msg|
+          memo += content_tag("li", msg)
+        end
+      end
+    end
+  end
+  
+def <%= singular_name %>_form_tag
+    form_tag(update_path, :class => "<%= singular_name %>_form", :method => :put, :id => "edit_<%= singular_name %>_#{<%= singular_name %>.id}_form")
+  end
+  
+<% for attribute in attributes -%>
+def <%= attribute.name %>_label
+    label :<%= singular_name %>, :<%= attribute.name %>
+  end
+  <%# TODO: Different fields for different attribute types -%>
+  
+def <%= attribute.name %>_text_field
+    text_field(:<%= singular_name %>, :<%= attribute.name %>, :id => "<%= attribute.name %>_text_field")
+  end
+
+<% end -%>
+
+  def form_submit
+    submit_tag "Update"
+  end
+  
+  def show_path
+    <%= singular_name %>_path(<%= singular_name %>)
+  end  
+  
+  def index_path
+    <%= plural_name %>_path
+  end
+  
+  private
+  
+  def update_path
+    <%= singular_name %>_path(<%= singular_name %>)
+  end
+  
+  def error_header
+    "u r dong it rong"
+  end
+  
+end

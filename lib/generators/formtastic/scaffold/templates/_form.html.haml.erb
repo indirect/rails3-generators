@@ -1,0 +1,10 @@
+= semantic_form_for @<%= file_name %> do |form|
+<%- if attributes.empty? -%>
+  = form.inputs
+<%- else -%>
+  = form.inputs do
+<%- for attribute in attributes -%>
+    = form.input :<%= attribute.name.gsub(/_id$/, '') %>, :label => '<%= attribute.name.titleize %>'
+<%- end -%>
+<%- end -%>
+  = form.buttons

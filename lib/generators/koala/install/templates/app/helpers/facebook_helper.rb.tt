@@ -1,0 +1,11 @@
+module FacebookHelper
+
+  def facebook_cookies
+    @facebook_cookies ||= Koala::Facebook::OAuth.new.get_user_from_cookie(cookies)
+  end
+
+  def access_token
+    @access_token ||= facebook_cookies['access_token']
+  end
+
+end

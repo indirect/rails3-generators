@@ -11,7 +11,8 @@ module Authlogic
         template 'session.rb', File.join('app', 'models', class_path, "#{file_name}.rb")
       end
       
-      hook_for :test_framework
+      # HACK: make test_framework generator for this generator.
+      hook_for :test_framework, :as => :model
     end
   end
 end

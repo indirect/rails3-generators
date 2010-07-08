@@ -1,0 +1,18 @@
+class <%= plural_name.camelize %>::Index < Mustache::Rails
+
+  def new_path
+    new_<%= singular_name %>_path()
+  end
+  
+  def listing
+    <%= plural_name %>.collect do |record|
+      {
+  <% for attribute in attributes -%>
+        :<%= attribute.name %> => record.<%= attribute.name %>,
+  <% end -%>
+        :show_path => <%= singular_name %>_path(record)
+      }
+    end
+  end
+  
+end

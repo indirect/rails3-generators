@@ -1,0 +1,15 @@
+= simple_form_for @<%= file_name %> do |form|
+
+  -if @<%= file_name %>.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@<%= file_name %>.errors.count, "error")} prohibited this #{<%= class_name %>.name.titleize} from being saved:"
+      %ul
+        - @<%= file_name %>.errors.full_messages.each do |msg|
+          %li= msg  
+
+<%- for attribute in attributes -%>
+  = form.input :<%= attribute.name %>, :label => '<%= attribute.name.titleize %>'
+<%- end -%>
+
+  .actions
+    = form.button :submit

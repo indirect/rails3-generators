@@ -5,18 +5,20 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.7.1"
+  s.version = "0.10.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza"]
-  s.date = %q{2010-05-04}
-  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, and Shoulda}
+  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson"]
+  s.date = %q{2010-07-02}
+  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
     ".gitignore",
+     "CHANGELOG.rdoc",
+     "Gemfile",
      "README.rdoc",
      "Rakefile",
      "VERSION",
@@ -31,41 +33,41 @@ Gem::Specification.new do |s|
      "lib/generators/datamapper/model/templates/model.rb",
      "lib/generators/datamapper/observer/observer_generator.rb",
      "lib/generators/datamapper/observer/templates/observer.rb",
+     "lib/generators/erubis.rb",
+     "lib/generators/erubis/controller/controller_generator.rb",
+     "lib/generators/erubis/controller/templates/view.html.erb",
+     "lib/generators/erubis/scaffold/scaffold_generator.rb",
+     "lib/generators/erubis/scaffold/templates/_form.html.erb",
+     "lib/generators/erubis/scaffold/templates/edit.html.erb",
+     "lib/generators/erubis/scaffold/templates/index.html.erb",
+     "lib/generators/erubis/scaffold/templates/new.html.erb",
+     "lib/generators/erubis/scaffold/templates/show.html.erb",
      "lib/generators/factory_girl.rb",
      "lib/generators/factory_girl/model/model_generator.rb",
      "lib/generators/factory_girl/model/templates/fixtures.rb",
-     "lib/generators/formtastic_erb.rb",
-     "lib/generators/formtastic_erb/USAGE",
-     "lib/generators/formtastic_erb/controller/controller_generator.rb",
-     "lib/generators/formtastic_erb/controller/templates/view.html.erb",
-     "lib/generators/formtastic_erb/scaffold/scaffold_generator.rb",
-     "lib/generators/formtastic_erb/scaffold/templates/_form.html.erb",
-     "lib/generators/formtastic_erb/scaffold/templates/edit.html.erb",
-     "lib/generators/formtastic_erb/scaffold/templates/index.html.erb",
-     "lib/generators/formtastic_erb/scaffold/templates/layout.html.erb",
-     "lib/generators/formtastic_erb/scaffold/templates/new.html.erb",
-     "lib/generators/formtastic_erb/scaffold/templates/show.html.erb",
-     "lib/generators/formtastic_haml.rb",
-     "lib/generators/formtastic_haml/USAGE",
-     "lib/generators/formtastic_haml/controller/controller_generator.rb",
-     "lib/generators/formtastic_haml/controller/templates/view.html.haml",
-     "lib/generators/formtastic_haml/scaffold/scaffold_generator.rb",
-     "lib/generators/formtastic_haml/scaffold/templates/_form.haml.erb",
-     "lib/generators/formtastic_haml/scaffold/templates/edit.haml.erb",
-     "lib/generators/formtastic_haml/scaffold/templates/index.haml.erb",
-     "lib/generators/formtastic_haml/scaffold/templates/layout.haml.erb",
-     "lib/generators/formtastic_haml/scaffold/templates/new.haml.erb",
-     "lib/generators/formtastic_haml/scaffold/templates/show.haml.erb",
+     "lib/generators/formtastic.rb",
+     "lib/generators/formtastic/scaffold/scaffold_generator.rb",
+     "lib/generators/formtastic/scaffold/templates/_form.html.erb.erb",
+     "lib/generators/formtastic/scaffold/templates/_form.html.haml.erb",
      "lib/generators/haml.rb",
      "lib/generators/haml/controller/controller_generator.rb",
      "lib/generators/haml/controller/templates/view.html.haml",
+     "lib/generators/haml/install/install_generator.rb",
+     "lib/generators/haml/install/templates/config/initializers/haml.rb.tt",
      "lib/generators/haml/scaffold/scaffold_generator.rb",
-     "lib/generators/haml/scaffold/templates/_form.haml.erb",
-     "lib/generators/haml/scaffold/templates/edit.haml.erb",
-     "lib/generators/haml/scaffold/templates/index.haml.erb",
-     "lib/generators/haml/scaffold/templates/layout.haml.erb",
-     "lib/generators/haml/scaffold/templates/new.haml.erb",
-     "lib/generators/haml/scaffold/templates/show.haml.erb",
+     "lib/generators/haml/scaffold/templates/_form.html.haml.erb",
+     "lib/generators/haml/scaffold/templates/edit.html.haml.erb",
+     "lib/generators/haml/scaffold/templates/index.html.haml.erb",
+     "lib/generators/haml/scaffold/templates/new.html.haml.erb",
+     "lib/generators/haml/scaffold/templates/show.html.haml.erb",
+     "lib/generators/jquery.rb",
+     "lib/generators/jquery/install/install_generator.rb",
+     "lib/generators/jquery/install/templates/config/initializers/jquery.rb.tt",
+     "lib/generators/koala.rb",
+     "lib/generators/koala/install/install_generator.rb",
+     "lib/generators/koala/install/templates/app/helpers/facebook_helper.rb.tt",
+     "lib/generators/koala/install/templates/config/facebook.yml.tt",
+     "lib/generators/koala/install/templates/config/initializers/koala.rb.tt",
      "lib/generators/machinist.rb",
      "lib/generators/machinist/model/model_generator.rb",
      "lib/generators/machinist/model/templates/blueprint.rb",
@@ -74,31 +76,106 @@ Gem::Specification.new do |s|
      "lib/generators/mongomapper/model/model_generator.rb",
      "lib/generators/mongomapper/model/templates/model.rb",
      "lib/generators/mongomapper/observer/observer_generator.rb",
+     "lib/generators/mustache.rb",
+     "lib/generators/mustache/README.md",
+     "lib/generators/mustache/controller/controller_generator.rb",
+     "lib/generators/mustache/controller/templates/view.html.mustache.erb",
+     "lib/generators/mustache/controller/templates/view.rb.erb",
+     "lib/generators/mustache/install/install_generator.rb",
+     "lib/generators/mustache/install/templates/config/initializers/mustache.rb",
+     "lib/generators/mustache/install/templates/lib/mustache_rails.rb",
+     "lib/generators/mustache/scaffold/scaffold_generator.rb",
+     "lib/generators/mustache/scaffold/templates/_form.html.mustache.erb",
+     "lib/generators/mustache/scaffold/templates/edit.html.mustache.erb",
+     "lib/generators/mustache/scaffold/templates/edit.rb.erb",
+     "lib/generators/mustache/scaffold/templates/index.html.mustache.erb",
+     "lib/generators/mustache/scaffold/templates/index.rb.erb",
+     "lib/generators/mustache/scaffold/templates/new.html.mustache.erb",
+     "lib/generators/mustache/scaffold/templates/new.rb.erb",
+     "lib/generators/mustache/scaffold/templates/show.html.mustache.erb",
+     "lib/generators/mustache/scaffold/templates/show.rb.erb",
      "lib/generators/shoulda.rb",
      "lib/generators/shoulda/controller/controller_generator.rb",
      "lib/generators/shoulda/controller/templates/controller.rb",
      "lib/generators/shoulda/model/model_generator.rb",
      "lib/generators/shoulda/model/templates/model.rb",
+     "lib/generators/simple_form.rb",
+     "lib/generators/simple_form/scaffold/scaffold_generator.rb",
+     "lib/generators/simple_form/scaffold/templates/_form.html.erb.erb",
+     "lib/generators/simple_form/scaffold/templates/_form.html.haml.erb",
      "lib/rails3-generators.rb",
-     "rails3-generators.gemspec"
+     "rails3-generators.gemspec",
+     "test/fixtures/routes.rb",
+     "test/lib/generators/authlogic/session_generator_test.rb",
+     "test/lib/generators/datamapper/migration_generator_test.rb",
+     "test/lib/generators/datamapper/model_generator_test.rb",
+     "test/lib/generators/datamapper/observer_generator_test.rb",
+     "test/lib/generators/erubis/controller_generator_test.rb",
+     "test/lib/generators/erubis/scaffold_generator_test.rb",
+     "test/lib/generators/factory_girl/model_generator_test.rb",
+     "test/lib/generators/formtastic/scaffold_generators_test.rb",
+     "test/lib/generators/haml/controller_generator_test.rb",
+     "test/lib/generators/haml/install_generator_test.rb",
+     "test/lib/generators/haml/scaffold_generator_test.rb",
+     "test/lib/generators/jquery/install_generator_test.rb",
+     "test/lib/generators/koala/install_generator_test.rb",
+     "test/lib/generators/machinist/model_generator_test.rb",
+     "test/lib/generators/mongomapper/model_generator_test.rb",
+     "test/lib/generators/mongomapper/observer_generator_test.rb",
+     "test/lib/generators/mustache/controller_generator_test.rb",
+     "test/lib/generators/mustache/scaffold_generator_test.rb",
+     "test/lib/generators/shoulda/controller_generator_test.rb",
+     "test/lib/generators/simple_form/scaffold_generators_test.rb",
+     "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/indirect/rails3-generators}
+  s.post_install_message = %q{
+rails3-generators-0.10.1
+
+Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
+for information about recent changes to this project.
+
+note: if you use erb templates add the follow to your generators block to take full advantage of this gem.
+g.template_engine :erubis
+
+}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Rails 3 compatible generators}
+  s.test_files = [
+    "test/fixtures/routes.rb",
+     "test/lib/generators/authlogic/session_generator_test.rb",
+     "test/lib/generators/datamapper/migration_generator_test.rb",
+     "test/lib/generators/datamapper/model_generator_test.rb",
+     "test/lib/generators/datamapper/observer_generator_test.rb",
+     "test/lib/generators/erubis/controller_generator_test.rb",
+     "test/lib/generators/erubis/scaffold_generator_test.rb",
+     "test/lib/generators/factory_girl/model_generator_test.rb",
+     "test/lib/generators/formtastic/scaffold_generators_test.rb",
+     "test/lib/generators/haml/controller_generator_test.rb",
+     "test/lib/generators/haml/install_generator_test.rb",
+     "test/lib/generators/haml/scaffold_generator_test.rb",
+     "test/lib/generators/jquery/install_generator_test.rb",
+     "test/lib/generators/koala/install_generator_test.rb",
+     "test/lib/generators/machinist/model_generator_test.rb",
+     "test/lib/generators/mongomapper/model_generator_test.rb",
+     "test/lib/generators/mongomapper/observer_generator_test.rb",
+     "test/lib/generators/mustache/controller_generator_test.rb",
+     "test/lib/generators/mustache/scaffold_generator_test.rb",
+     "test/lib/generators/shoulda/controller_generator_test.rb",
+     "test/lib/generators/simple_form/scaffold_generators_test.rb",
+     "test/test_helper.rb"
+  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
     else
-      s.add_dependency(%q<rspec>, [">= 1.2.9"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 1.2.9"])
   end
 end
 
