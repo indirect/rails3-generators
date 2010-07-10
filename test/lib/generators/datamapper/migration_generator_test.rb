@@ -10,7 +10,7 @@ class Datamapper::Generators::MigrationGeneratorTest < Rails::Generators::TestCa
 
   test "invoke with name of migration" do      
     name = 'account'    
-    run_generator   
+    run_generator [name]   
     assert_file "db/migrate/create_#{name}.rb" do |migration|      
       assert_match /up do/, migration      
       assert_match /down do/, migration

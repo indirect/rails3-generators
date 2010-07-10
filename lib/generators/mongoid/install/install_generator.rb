@@ -1,11 +1,11 @@
-# require 'thor-ext'
 require 'rails/generators/base'
+require 'generators/mongoid'
 
 module Mongoid
   module Generators
-    class SetupGenerator < Rails::Generators::Base            
+    class InstallGenerator < Base            
 
-      argument      :database,  :type => :string, :default => 'mongo_db_default', :desc => "Name of the Mongo database to use"            
+      # argument      :database,  :type => :string, :default => 'mongo_db_default', :desc => "Name of the Mongo database to use"            
       class_option  :host,      :type => :string, :default => 'localhost',        :desc => "Name of the Mongo host use"
 
       # check_class_collision
@@ -19,6 +19,10 @@ module Mongoid
       end
       
       protected
+
+      def database
+        name
+      end
 
       def orm_gem_name
         "mongoid"

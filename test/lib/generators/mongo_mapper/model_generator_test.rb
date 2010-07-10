@@ -8,10 +8,6 @@ class MongoMapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   setup :prepare_destination
   setup :copy_routes
 
-  test "invoke with no arguments" do
-    run_generator
-  end
-
   test "invoke with model name" do
     content = run_generator %w(Account)
 
