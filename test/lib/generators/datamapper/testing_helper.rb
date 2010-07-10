@@ -1,0 +1,1 @@
+require_generators :datamapper   => ['model', 'observer', 'migration']

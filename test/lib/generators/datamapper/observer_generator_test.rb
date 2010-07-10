@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'lib/generators/datamapper/testing_helper'
 
 class Datamapper::Generators::ObserverGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)

@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'lib/generators/datamapper/testing_helper'
 
 class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
@@ -14,7 +15,7 @@ class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   test "invoke with model name" do
     content = run_generator %w(Account)
 
-    assert_file "app/models/account.rb" do |account|
+    assert_file "app/models/create_account.rb" do |account|
       assert_class "Account", account do |klass|
         assert_match /include DataMapper::Resource/, klass
         assert_match /property :id, Serial/, klass        
@@ -47,7 +48,7 @@ class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
     content = run_generator %w(Admin --parent User)
     assert_file "app/models/admin.rb" do |account|
       assert_class "Admin", account do |klass|
-        assert_not_match /property :id, Serial/, klass
+        assert_no_match /property :id, Serial/, klass
         assert_match /\s+<\s+User/, klass
       end
     end

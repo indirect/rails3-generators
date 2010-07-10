@@ -11,8 +11,9 @@ module Mongoid
       # check_class_collision
 
       def create_files
-        template "mongoid.rb" , "config/initializers/mongoid.rb" 
-        template 'database.mongo.yml', "config/database.mongo.yml"   
+        template "mongoid.erb",         "config/initializers/mongoid.rb" 
+        template 'database.mongo.yml',  "config/database.mongo.yml"   
+
         puts "Please ensure Gemfile contains: gem '#{orm_gem_name}'"
         say "For production enviroment DB configuration, set environment variables as indicated in config/mongo_database.yml"        
       end

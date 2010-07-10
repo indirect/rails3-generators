@@ -10,11 +10,15 @@ module Mongoid
       class_option :parent,       :type => :string,   :aliases => "-P",  :desc => "Class name of parent document"
       class_option :timestamps,   :type => :boolean,  :aliases => "-T",  :desc => "Add timestamps created_at and updated_at", :default => false
       class_option :version,      :type => :boolean,  :aliases => "-V",  :desc => "Add versioning", :default => false      
+      class_option :enslave,      :type => :boolean,  :aliases => "-S",  :desc => "Add enslavement", :default => false      
+      class_option :cache,        :type => :boolean,  :aliases => "-C",  :desc => "Add Caching", :default => false      
                                  
       def initialize(*args, &block)
         super   
         # from helpers/model_helper
-        parse_model_atributes
+        parse_model_attributes
+        
+        @model_attributes = attributes
       end
 
       def create_model_file
@@ -27,6 +31,14 @@ module Mongoid
 
       def embedded?
         options[:embedded_in]
+      end
+
+      def enslave?
+        options[:enslave]
+      end
+
+      def cache?
+        options[:cache]
       end
 
       def parent?

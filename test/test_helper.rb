@@ -46,15 +46,9 @@ end
 def generator_list
   {
     :rails        => ['scaffold', 'controller'],
-    :mustache     => ['scaffold', 'controller', 'install'],
-    :haml         => ['scaffold', 'controller', 'install'],
     :erubis       => ['scaffold'],
     :simple_form  => ['scaffold'],
-    :formtastic   => ['scaffold'], 
-    :datamapper   => ['model', 'observer', 'migration'],
-    :mongomapper  => ['model', 'observer'],
-    :mongo_mapper => ['model', 'observer', 'install'],
-    :mongoid      => ['model', 'install'],
+    :formtastic   => ['scaffold'],
     :factory_girl => ['model'],
     :machinist    => ['model'],
     :authlogic    => ['session'],
@@ -73,9 +67,12 @@ def path_prefix name
   end
 end
 
-generator_list.each do |name, generators|
-  generators.each do |generator_name|
-    require File.join(path_prefix(name), name.to_s, generator_name.to_s, "#{generator_name}_generator")
-  end    
+def require_generators generator_list
+  generator_list.each do |name, generators|
+    generators.each do |generator_name|
+      require File.join(path_prefix(name), name.to_s, generator_name.to_s, "#{generator_name}_generator")
+    end    
+  end
 end
 
+require_generators generator_list

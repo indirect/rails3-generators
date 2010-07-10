@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'lib/generators/mongoid/testing_helper'
 
 class Mongoid::Generators::SetupGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)

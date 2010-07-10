@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'lib/generators/mongo_mapper/testing_helper'
 
 class MongoMapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)

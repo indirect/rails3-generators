@@ -8,5 +8,5 @@ class <%= class_name %><%= "< #{options[:parent].classify}" if parent? %>
   property :<%= attribute.name %>, <%= attribute.type_class %>
 <% end -%>
 
-<%= timestamp_staments if timestamps? %>
+<%= timestamp_statements if timestamps? %>
 end

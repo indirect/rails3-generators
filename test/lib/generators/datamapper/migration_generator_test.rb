@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'lib/generators/datamapper/testing_helper'
 
 class Datamapper::Generators::MigrationGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
@@ -10,7 +11,7 @@ class Datamapper::Generators::MigrationGeneratorTest < Rails::Generators::TestCa
   test "invoke with name of migration" do      
     name = 'account'    
     run_generator   
-    assert_file "db/migrate/#{name}.rb" do |migration|      
+    assert_file "db/migrate/create_#{name}.rb" do |migration|      
       assert_match /up do/, migration      
       assert_match /down do/, migration
       assert_match /modify_table :#{name.tableize}/, migration      

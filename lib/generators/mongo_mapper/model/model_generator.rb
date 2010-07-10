@@ -5,7 +5,7 @@ module MongoMapper
   module Generators
     class ModelGenerator < Base
 
-      argument      :attributes,  :type => :array, :default => [],      :banner => "field:type field:type#, posfixing with '#' marks attribute to be indexed"
+      argument  :attributes,  :type => :array, :default => [],      :banner => "field:type field:type#, posfixing with '#' marks attribute to be indexed"
 
       class_option :timestamps,   :type => :boolean, :aliases => "-T",  :desc => "Add timestamps created_at and updated_at", :default => false
       class_option :embedded,     :type => :boolean, :aliases => "-E",  :desc => "Embedded document", :default => false
@@ -18,6 +18,8 @@ module MongoMapper
         super         
         # from helpers/model_helper        
         parse_model_attributes
+        
+        model_attributes = attributes
       end
 
       def create_model_file

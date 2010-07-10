@@ -4,35 +4,37 @@ module Rails3Generators
 
       attr_accessor :model_attributes, :model_indexes
 
-      def parse_model_arguments(with_indexes = true)
+      def parse_model_attributes(with_indexes = true)
         @model_attributes = []        
         @model_indexes = {}
-        
-        if with_indexes
-          # extract index markers
-          if arg.include?('#')  
-            arg.gsub! /#.*$/, ''            
-            model_indexes[arg_name(arg).to_sym] = true
-          end
-        end
-
-        if arg.include?(':')
-          model_attributes << Rails::Generators::GeneratedAttribute.new(*arg.split(':'))
-        else
-          model_attributes << Rails::Generators::GeneratedAttribute.new(arg, "string")            
-        end
-
-        model_attributes.uniq!
-
-        if model_attributes.empty?
-          if model_exists?
-            model_columns_for_attributes.each do |column|
-              model_attributes << Rails::Generators::GeneratedAttribute.new(column.name.to_s, column.type.to_s)
-            end
-          else
-            model_attributes << Rails::Generators::GeneratedAttribute.new('name', 'string')
-          end
-        end
+        # 
+        # attributes.each do |arg|
+        #   if with_indexes
+        #     # extract index markers
+        #     if arg.include?('#')  
+        #       arg.gsub! /#.*$/, ''            
+        #       model_indexes[arg_name(arg).to_sym] = true
+        #     end
+        #   end
+        # 
+        #   if arg.include?(':')
+        #     model_attributes << Rails::Generators::GeneratedAttribute.new(*arg.split(':'))
+        #   else
+        #     model_attributes << Rails::Generators::GeneratedAttribute.new(arg, "string")            
+        #   end
+        # 
+        #   model_attributes.uniq!
+        # 
+        #   if model_attributes.empty?
+        #     if model_exists?
+        #       model_columns_for_attributes.each do |column|
+        #         model_attributes << Rails::Generators::GeneratedAttribute.new(column.name.to_s, column.type.to_s)
+        #       end
+        #     else
+        #       model_attributes << Rails::Generators::GeneratedAttribute.new('name', 'string')
+        #     end
+        #   end
+        # end 
       end      
 
       def arg_name(arg)
