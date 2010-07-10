@@ -8,7 +8,7 @@ module Mongoid
       argument      :database,  :type => :string, :default => 'mongo_db_default', :desc => "Name of the Mongo database to use"            
       class_option  :host,      :type => :string, :default => 'localhost',        :desc => "Name of the Mongo host use"
 
-      check_class_collision
+      # check_class_collision
 
       def create_files
         template "mongoid.rb" , "config/initializers/mongoid.rb" 

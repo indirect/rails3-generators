@@ -44,7 +44,9 @@ module Datamapper
  
   property :updated_at, DateTime
   # property :updated_on, Date
-}
+}            
+      end
+      
       hook_for :test_framework
     end
   end

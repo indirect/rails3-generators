@@ -1,4 +1,4 @@
-require 'generators/mongomapper'
+require 'generators/mongo_mapper'
 require 'generators/helpers/model_helper'
 
 module MongoMapper
@@ -12,7 +12,7 @@ module MongoMapper
       class_option :version,      :type => :boolean, :aliases => "-V",  :desc => "Add versioning",    :default => false
       class_option :parent,       :type => :string,  :aliases => "-P",  :desc => "Class name of parent document"
 
-      check_class_collision
+      # check_class_collision
 
       def initialize(*args, &block)
         super         
@@ -33,7 +33,7 @@ module MongoMapper
       end
 
       def version_statement
-        'include Versioned # see http://github.com/nathancolgate/versioned for 0.8 compatible version
+        'include Versioned # see http://github.com/nathancolgate/versioned for 0.8 compatible version'
       end
 
       def version?
@@ -76,17 +76,7 @@ module MongoMapper
         class_name.constantize.columns.reject do |column|
           column.name.to_s =~ /^(id|created_at|updated_at)$/
         end
-      end        
-    end 
-    
-    def self.source_root
-      @source_root ||= File.expand_path('../templates', __FILE__)
-    end
-
-    def self.banner
-      "#{$0} mongo_mapper:#{generator_name} #{self.arguments.map{ |a| a.usage }.join(' ')} [options]"
-    end
-      
+      end
     end
   end
 end

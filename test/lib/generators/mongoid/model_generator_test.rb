@@ -71,4 +71,5 @@ class Mongoid::Generators::ModelGeneratorTest < Rails::Generators::TestCase
         assert_match /\s+<\s+User/, klass
       end
     end
-  endend
+  end
+end

@@ -45,11 +45,10 @@ class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
 
   test "invoke with model name and --parent option" do
     content = run_generator %w(Admin --parent User)
-
     assert_file "app/models/admin.rb" do |account|
       assert_class "Admin", account do |klass|
-        assert_no_match /property :id, Serial/, klass
-        assert_match /\s+<\s+User/, klass        
+        assert_not_match /property :id, Serial/, klass
+        assert_match /\s+<\s+User/, klass
       end
     end
   end
