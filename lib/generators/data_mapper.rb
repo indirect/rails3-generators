@@ -4,7 +4,7 @@ require 'rails/generators/active_model'
 
 require 'generators/helpers/migration_helper'
 
-module Datamapper
+module DataMapper
   module Generators
     class Base < Rails::Generators::NamedBase #:nodoc:
       include Rails3Generators::MigrationHelper
@@ -12,7 +12,7 @@ module Datamapper
 
       def self.source_root
         @_datamapper_source_root ||= File.expand_path(File.join(File.dirname(__FILE__),
-                                                      'datamapper', generator_name, 'templates'))
+                                                      'data_mapper', generator_name, 'templates'))
       end
 
       protected

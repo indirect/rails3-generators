@@ -58,7 +58,7 @@ def generator_list
   }
 end
 
-def path_prefix name
+def path_prefix(name)
   case name
   when :rails
     'rails/generators'
@@ -67,12 +67,13 @@ def path_prefix name
   end
 end
 
-def require_generators generator_list
+def require_generators(generator_list)
   generator_list.each do |name, generators|
     generators.each do |generator_name|
       require File.join(path_prefix(name), name.to_s, generator_name.to_s, "#{generator_name}_generator")
     end    
   end
 end
+alias :require_generator :require_generators
 
 require_generators generator_list

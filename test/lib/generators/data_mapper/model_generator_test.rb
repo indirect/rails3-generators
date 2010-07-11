@@ -1,9 +1,9 @@
 require 'test_helper'
-require 'lib/generators/datamapper/testing_helper'
+require_generator :data_mapper   => ['model']
 
-class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
+class DataMapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
-  tests Datamapper::Generators::ModelGenerator
+  tests DataMapper::Generators::ModelGenerator
 
   setup :prepare_destination
   setup :copy_routes

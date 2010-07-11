@@ -1,6 +1,6 @@
-require 'generators/datamapper'
+require 'generators/data_mapper'
 
-module Datamapper
+module DataMapper
   module Generators
     class ModelGenerator < Base
       argument :attributes, :type => :array, :default => [], :banner => "field:type field:type"

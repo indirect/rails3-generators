@@ -1,8 +1,18 @@
 == TODO
 * Grow Mustache up.(fix the TODOs and move the source to a mustache-rails like gem)
 * Write some documentation. (In both the github wiki and the source code)
-* Datamapper Tests
-* Mongomapper Tests
+
+== Mongoid-Mongomapper
+* enhancements
+  * Added new mongo_mapper generator for mongo mapper 0.8 with lots of extra features [Kristian Mandrup]
+  * Added mongoid generator for mongoid 2.0.beta with features similar to new mongo_mapper [Kristian Mandrup]
+  
+* optimize
+  * renamed Datamapper to DataMapper
+  
+* fix
+  * added DataMapper Tests
+  * added MongoMapper Tests
 
 == Master
 * optimize
@@ -11,10 +21,6 @@
 == 0.10.1
 * optimize
   * move mustache generators to correct hidden_namespaces location. (mustache:install was being hidden)
-
-Kristian Mandrup, July 8 2010
-* Added new mongo_mapper generator for mongo mapper 0.8 with lots of extra features (needs testing!)
-* Added mongoid generator for mongoid 2.0.beta with features similar to new mongo_mapper (also needs testing!)
 
 == 0.10.0
 * enhancements

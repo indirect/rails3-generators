@@ -1,9 +1,9 @@
 require 'test_helper'
-require 'lib/generators/datamapper/testing_helper'
+require_generator :data_mapper   => ['observer']
 
-class Datamapper::Generators::ObserverGeneratorTest < Rails::Generators::TestCase
+class DataMapper::Generators::ObserverGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
-  tests Datamapper::Generators::ObserverGenerator
+  tests DataMapper::Generators::ObserverGenerator
 
   setup :prepare_destination
   setup :copy_routes
