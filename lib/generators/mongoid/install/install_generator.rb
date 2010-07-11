@@ -8,14 +8,12 @@ module Mongoid
       # argument      :database,  :type => :string, :default => 'mongo_db_default', :desc => "Name of the Mongo database to use"            
       class_option  :host,      :type => :string, :default => 'localhost',        :desc => "Name of the Mongo host use"
 
-      # check_class_collision
-
       def create_files
-        template "mongoid.erb",         "config/initializers/mongoid.rb" 
+        template "mongoid.rb",         "config/initializers/mongoid.rb" 
         template 'database.mongo.yml',  "config/database.mongo.yml"   
 
         puts "Please ensure Gemfile contains: gem '#{orm_gem_name}', '>=2.0.0.beta9'"
-        say "For production enviroment DB configuration, set environment variables as indicated in config/mongo_database.yml"        
+        say "For production enviroment DB configuration, set environment variables as indicated in config/database.mongo.yml"        
       end
       
       protected
