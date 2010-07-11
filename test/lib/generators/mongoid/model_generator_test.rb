@@ -30,7 +30,7 @@ class Mongoid::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   end  
   
   test "invoke with model name and --embedded_in option" do
-    content = run_generator %w(Room --embedded_in House)
+    content = run_generator %w(Room --embedded-in House)
 
     assert_file "app/models/room.rb" do |account|
       assert_class "Room", account do |klass|

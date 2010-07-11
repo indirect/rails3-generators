@@ -8,7 +8,15 @@ class Datamapper::Generators::ObserverGeneratorTest < Rails::Generators::TestCas
   setup :prepare_destination
   setup :copy_routes
 
-  test "invoke" do
-    flunk "I don't use Datamapper. If you use it please add tests."
+  test "invoke with model name" do
+    name = 'account'
+    content = run_generator %w(Account)
+
+    assert_file "app/models/#{name}_observer.rb" do |account|
+      assert_class "Account", account do |klass|
+        assert_match /include DataMapper::Observer/, klass
+        assert_match /observe\s+#{name.camelize}/, klass
+      end
+    end
   end
 end

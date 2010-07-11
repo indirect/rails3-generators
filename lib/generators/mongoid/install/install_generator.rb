@@ -14,7 +14,7 @@ module Mongoid
         template "mongoid.erb",         "config/initializers/mongoid.rb" 
         template 'database.mongo.yml',  "config/database.mongo.yml"   
 
-        puts "Please ensure Gemfile contains: gem '#{orm_gem_name}'"
+        puts "Please ensure Gemfile contains: gem '#{orm_gem_name}', '>=2.0.0.beta9'"
         say "For production enviroment DB configuration, set environment variables as indicated in config/mongo_database.yml"        
       end
       

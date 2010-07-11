@@ -11,7 +11,7 @@ class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   test "invoke with model name" do
     content = run_generator %w(Account)
 
-    assert_file "app/models/create_account.rb" do |account|
+    assert_file "app/models/account.rb" do |account|
       assert_class "Account", account do |klass|
         assert_match /include DataMapper::Resource/, klass
         assert_match /property :id, Serial/, klass        
@@ -35,7 +35,8 @@ class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
 
     assert_file "app/models/account.rb" do |account|
       assert_class "Account", account do |klass|
-        assert_match /timestamps!/, klass
+        assert_match /property :created_at, DateTime/, klass
+        assert_match /property :updated_at, DateTime/, klass        
       end
     end
   end  
@@ -45,7 +46,7 @@ class Datamapper::Generators::ModelGeneratorTest < Rails::Generators::TestCase
     assert_file "app/models/admin.rb" do |account|
       assert_class "Admin", account do |klass|
         assert_no_match /property :id, Serial/, klass
-        assert_match /\s+<\s+User/, klass
+        assert_match /<\s+User/, klass
       end
     end
   end

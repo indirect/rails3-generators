@@ -2,10 +2,13 @@ require 'rails/generators/named_base'
 require 'rails/generators/migration'
 require 'rails/generators/active_model'
 
+require 'generators/helpers/migration_helper'
+
 module Datamapper
   module Generators
     class Base < Rails::Generators::NamedBase #:nodoc:
-      include Rails::Generators::Migration
+      include Rails3Generators::MigrationHelper
+      # include Rails::Generators::Migration
 
       def self.source_root
         @_datamapper_source_root ||= File.expand_path(File.join(File.dirname(__FILE__),

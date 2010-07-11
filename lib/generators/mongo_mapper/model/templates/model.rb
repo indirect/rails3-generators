@@ -1,11 +1,8 @@
 class <%= class_name %><%= "< #{options[:parent].classify}" if parent? %>
 <% unless parent? -%>
   include MongoMapper::Document         
-<% end -%>  
-<%= embedded_statement if embedded? %>
-<%= version_statement if version? %>
-<%= timestamps_statement if timestamps? %>
-
+<% end -%>
+<%= statements %>
 <% unless parent? -%>
 # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
 # validates_presence_of :attribute
@@ -33,7 +30,6 @@ class <%= class_name %><%= "< #{options[:parent].classify}" if parent? %>
 # key :user_ids, Array, :typecast => 'ObjectId'
   
 <% end -%>   
-
 <% model_attributes.each_with_index do |attribute, i| -%>
   key :<%= attribute.name %>, <%= attribute.type_class %><%= ", :index => true" if model_indexes[attribute.name] %>
 <% end -%>

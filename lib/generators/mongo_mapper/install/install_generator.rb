@@ -1,4 +1,4 @@
-require 'generators/mongomapper'
+require 'generators/mongo_mapper'
 
 module MongoMapper
   module Generators

@@ -11,8 +11,7 @@ class Mongomapper::Generators::ObserverGeneratorTest < Rails::Generators::TestCa
   test "invoke with name Account" do
     name = 'account'
     run_generator [name]
-    file_name = File.join('app/models', name, "#{name}_observer.rb")
-    assert_file file_name do |file_content|
+    assert_file "app/models/#{name}_observer.rb" do |file_content|
       assert_class "Account", file_content do |klass|
         assert_match /< MongoMapper::Observer/, klass        
       end

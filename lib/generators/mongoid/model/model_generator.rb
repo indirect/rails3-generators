@@ -1,5 +1,4 @@
 require 'generators/mongoid'
-require 'generators/helpers/model_helper'
 
 module Mongoid
   module Generators
@@ -12,22 +11,18 @@ module Mongoid
       class_option :version,      :type => :boolean,  :aliases => "-V",  :desc => "Add versioning", :default => false      
       class_option :enslave,      :type => :boolean,  :aliases => "-S",  :desc => "Add enslavement", :default => false      
       class_option :cache,        :type => :boolean,  :aliases => "-C",  :desc => "Add Caching", :default => false      
-                                 
-      def initialize(*args, &block)
-        super   
-        # from helpers/model_helper
-        parse_model_attributes
-        
-        @model_attributes = attributes
-      end
 
-      def create_model_file
-        template 'model.rb', "app/models/#{singular_name}.rb"        
+      class_option :index,        :type => :array,    :aliases => "-I",  :desc => "Keys to index", :default => []      
+                                 
+      def create_model_file        
+        template('model.rb', "app/models/#{file_name}.rb") if valid_model_name?(file_name)
       end
 
       protected  
 
-      include Rails3Generators::Helpers::Model
+      def valid_model_name?(name)
+        (name =~ /("|'|:|;|\||&|<|>)/).nil? 
+      end
 
       def embedded?
         options[:embedded_in]
@@ -45,12 +40,59 @@ module Mongoid
         options[:parent]
       end
 
+      def parent
+        options[:parent]        
+      end
+
       def timestamps?
         options[:timestamps]
       end
 
       def version?
         options[:version]
+      end
+
+      def indexes
+        options[:index] || []                
+      end
+                 
+      def indexes?
+        !indexes.empty?
+      end      
+
+      def has_key?(key)
+        attribute_names.include?(key)        
+      end
+      
+      def attribute_names
+        attributes.map { |key| key.name}
+      end        
+      
+      def write_indexes
+        say "write_indexes", :green
+        if indexes?
+          idx = indexes.map { |key| "  index :#{key}, :unique => true" if has_key?(key) } 
+          say "indexes: #{idx}"
+          idx.join("\n") 
+        else
+          say "no indexes"
+          nil
+        end
+      end
+
+      def extra_statements
+        stm_list = []        
+        stm_list << "  cache" if cache?
+        stm_list << "  enslave" if enslave?
+        stm_list.join("\n")        
+      end        
+
+      def statements
+        stm_list = []
+        stm_list << embedded_statement if embedded?
+        stm_list << version_statement if version?
+        stm_list << timestamps_statement if timestamps?
+        stm_list.join("\n")        
       end
 
       def embedded_statement
