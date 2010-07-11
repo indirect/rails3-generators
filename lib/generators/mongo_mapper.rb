@@ -1,35 +1,14 @@
 require 'rails/generators/named_base'
-# require 'rails/generators/migration'
 require 'rails/generators/active_model'
 
 module MongoMapper
   module Generators
     class Base < Rails::Generators::NamedBase #:nodoc:
-      # include Rails::Generators::Migration
 
       def self.source_root
         @_mongomapper_source_root ||= File.expand_path(File.join(File.dirname(__FILE__),
-                                                      'mongo_mapper', generator_name, 'templates'))
+                                                                 'mongo_mapper', generator_name, 'templates'))
       end
-
-      protected
-
-        # # mongomapper does not care if migrations have the same name as long as
-        # # they have different ids. 
-        # #
-        # def migration_exists?(dirname, file_name) #:nodoc:
-        #   false
-        # end
-        # 
-        # # Implement the required interface for Rails::Generators::Migration.
-        # #
-        # def next_migration_number(dirname) #:nodoc:
-        #   if options[:id]
-        #     "%.3d" % options[:id]
-        #   else
-        #     "%.3d" % (current_migration_number(dirname) + 1)
-        #   end
-        # end    
     end
 
     class ActiveModel < Rails::Generators::ActiveModel #:nodoc:
@@ -54,7 +33,7 @@ module MongoMapper
       end
 
       def update_attributes(params=nil)
-        "#{name}.update(#{params})"  
+        "#{name}.update(#{params})"
       end
 
       def errors

@@ -8,7 +8,8 @@
   * Added mongoid generator for mongoid 2.0.beta with features similar to new mongo_mapper [Kristian Mandrup]
   
 * optimize
-  * renamed Datamapper to DataMapper
+  * renamed datamapper to data_mapper
+  * renamed mongomapper to mongo_mapper.
   
 * fix
   * added DataMapper Tests

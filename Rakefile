@@ -19,6 +19,9 @@ begin
 rails3-generators-#{version}
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
+  
+note: ORM :datamapper has been renamed to :data_mapper
+note: ORM :mongomapper has been renamed to :mongo_mapper
 
 note: if you use erb templates add the follow to your generators block to take full advantage of this gem.
 g.template_engine :erubis
