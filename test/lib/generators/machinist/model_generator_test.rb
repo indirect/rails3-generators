@@ -23,7 +23,7 @@ class Machinist::Generators::ModelGeneratorTest < Rails::Generators::TestCase
   end
   
   test "invoke when fixture replacement is given with custom file extenstion" do
-    content = run_generator %w(Account name:string age:integer -r machinist --extenstion i.like.using.blueprint)
+    content = run_generator %w(Account name:string age:integer -r machinist --extension i.like.using.blueprint)
     assert_file "test/blueprints/accounts.i.like.using.blueprint"
   end
 end
