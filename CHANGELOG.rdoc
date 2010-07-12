@@ -4,7 +4,7 @@
 * Datamapper Tests
 * Mongomapper Tests
 
-== 0.10.2
+== 0.10.3
 * optimize
   * add --extension option to machinist blueprints. (I like using ".blueprint". --Louis T.)
 
