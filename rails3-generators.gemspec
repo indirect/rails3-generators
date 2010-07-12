@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.10.1"
+  s.version = "0.10.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson"]
-  s.date = %q{2010-07-02}
+  s.date = %q{2010-07-11}
   s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
@@ -130,7 +130,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://github.com/indirect/rails3-generators}
   s.post_install_message = %q{
-rails3-generators-0.10.1
+rails3-generators-0.10.2
 
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
