@@ -2,7 +2,7 @@
 * Grow Mustache up.(fix the TODOs and move the source to a mustache-rails like gem)
 * Write some documentation. (In both the github wiki and the source code)
 
-== Mongoid-Mongomapper
+== 0.11.0
 * enhancements
   * Added new mongo_mapper generator for mongo mapper 0.8 with lots of extra features [Kristian Mandrup]
   * Added mongoid generator for mongoid 2.0.beta with features similar to new mongo_mapper [Kristian Mandrup]
