@@ -7,6 +7,7 @@
 == Master
 * optimize
   * Update jquery install by removing unneeded initializer file
+  * Update mustache_rails to user autoload_paths instead of load_paths
 
 == 0.10.3
 * optimize
