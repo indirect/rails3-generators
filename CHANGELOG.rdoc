@@ -4,7 +4,7 @@
 * Datamapper Tests
 * Mongomapper Tests
 
-== Master
+== 0.10.4
 * optimize
   * Update jquery install by removing unneeded initializer file
   * Update mustache_rails to user autoload_paths instead of load_paths
