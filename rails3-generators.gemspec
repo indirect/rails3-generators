@@ -5,18 +5,19 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.10.3"
+  s.version = "0.11.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson"]
-  s.date = %q{2010-07-11}
-  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Shoulda, Formtastic and SimpleForm}
+  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson", "Kristian Mandrup"]
+  s.date = %q{2010-07-22}
+  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic and SimpleForm}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
-    ".gitignore",
+    ".bundle/config",
+     ".gitignore",
      "CHANGELOG.rdoc",
      "Gemfile",
      "README.rdoc",
@@ -25,14 +26,14 @@ Gem::Specification.new do |s|
      "lib/generators/authlogic.rb",
      "lib/generators/authlogic/session/session_generator.rb",
      "lib/generators/authlogic/session/templates/session.rb",
-     "lib/generators/datamapper.rb",
-     "lib/generators/datamapper/migration/migration_generator.rb",
-     "lib/generators/datamapper/migration/templates/migration.rb",
-     "lib/generators/datamapper/model/model_generator.rb",
-     "lib/generators/datamapper/model/templates/migration.rb",
-     "lib/generators/datamapper/model/templates/model.rb",
-     "lib/generators/datamapper/observer/observer_generator.rb",
-     "lib/generators/datamapper/observer/templates/observer.rb",
+     "lib/generators/data_mapper.rb",
+     "lib/generators/data_mapper/migration/migration_generator.rb",
+     "lib/generators/data_mapper/migration/templates/migration.rb",
+     "lib/generators/data_mapper/model/model_generator.rb",
+     "lib/generators/data_mapper/model/templates/migration.rb",
+     "lib/generators/data_mapper/model/templates/model.rb",
+     "lib/generators/data_mapper/observer/observer_generator.rb",
+     "lib/generators/data_mapper/observer/templates/observer.rb",
      "lib/generators/erubis.rb",
      "lib/generators/erubis/controller/controller_generator.rb",
      "lib/generators/erubis/controller/templates/view.html.erb",
@@ -60,9 +61,11 @@ Gem::Specification.new do |s|
      "lib/generators/haml/scaffold/templates/index.html.haml.erb",
      "lib/generators/haml/scaffold/templates/new.html.haml.erb",
      "lib/generators/haml/scaffold/templates/show.html.haml.erb",
+     "lib/generators/helpers/migration_helper.rb",
+     "lib/generators/helpers/model_helper.rb",
      "lib/generators/jquery.rb",
      "lib/generators/jquery/install/install_generator.rb",
-     "lib/generators/jquery/install/templates/config/initializers/jquery.rb.tt",
+     "lib/generators/jquery/install/templates/README",
      "lib/generators/koala.rb",
      "lib/generators/koala/install/install_generator.rb",
      "lib/generators/koala/install/templates/app/helpers/facebook_helper.rb.tt",
@@ -72,10 +75,21 @@ Gem::Specification.new do |s|
      "lib/generators/machinist/model/model_generator.rb",
      "lib/generators/machinist/model/templates/blueprint.rb",
      "lib/generators/machinist/model/templates/machinist_initializer.rb",
-     "lib/generators/mongomapper.rb",
-     "lib/generators/mongomapper/model/model_generator.rb",
-     "lib/generators/mongomapper/model/templates/model.rb",
-     "lib/generators/mongomapper/observer/observer_generator.rb",
+     "lib/generators/mongo_mapper.rb",
+     "lib/generators/mongo_mapper/.DS_Store",
+     "lib/generators/mongo_mapper/install/install_generator.rb",
+     "lib/generators/mongo_mapper/install/templates/database.mongo.yml",
+     "lib/generators/mongo_mapper/install/templates/mongo_mapper.rb",
+     "lib/generators/mongo_mapper/model/model_generator.rb",
+     "lib/generators/mongo_mapper/model/templates/model.rb",
+     "lib/generators/mongo_mapper/observer/observer_generator.rb",
+     "lib/generators/mongo_mapper/observer/templates/observer.rb",
+     "lib/generators/mongoid.rb",
+     "lib/generators/mongoid/install/install_generator.rb",
+     "lib/generators/mongoid/install/templates/database.mongo.yml",
+     "lib/generators/mongoid/install/templates/mongoid.rb",
+     "lib/generators/mongoid/model/model_generator.rb",
+     "lib/generators/mongoid/model/templates/model.rb",
      "lib/generators/mustache.rb",
      "lib/generators/mustache/README.md",
      "lib/generators/mustache/controller/controller_generator.rb",
@@ -107,9 +121,9 @@ Gem::Specification.new do |s|
      "rails3-generators.gemspec",
      "test/fixtures/routes.rb",
      "test/lib/generators/authlogic/session_generator_test.rb",
-     "test/lib/generators/datamapper/migration_generator_test.rb",
-     "test/lib/generators/datamapper/model_generator_test.rb",
-     "test/lib/generators/datamapper/observer_generator_test.rb",
+     "test/lib/generators/data_mapper/migration_generator_test.rb",
+     "test/lib/generators/data_mapper/model_generator_test.rb",
+     "test/lib/generators/data_mapper/observer_generator_test.rb",
      "test/lib/generators/erubis/controller_generator_test.rb",
      "test/lib/generators/erubis/scaffold_generator_test.rb",
      "test/lib/generators/factory_girl/model_generator_test.rb",
@@ -117,23 +131,33 @@ Gem::Specification.new do |s|
      "test/lib/generators/haml/controller_generator_test.rb",
      "test/lib/generators/haml/install_generator_test.rb",
      "test/lib/generators/haml/scaffold_generator_test.rb",
+     "test/lib/generators/haml/testing_helper.rb",
      "test/lib/generators/jquery/install_generator_test.rb",
      "test/lib/generators/koala/install_generator_test.rb",
      "test/lib/generators/machinist/model_generator_test.rb",
-     "test/lib/generators/mongomapper/model_generator_test.rb",
-     "test/lib/generators/mongomapper/observer_generator_test.rb",
+     "test/lib/generators/mongo_mapper/install_generator_test.rb",
+     "test/lib/generators/mongo_mapper/model_generator_test.rb",
+     "test/lib/generators/mongo_mapper/observer_generator_test.rb",
+     "test/lib/generators/mongo_mapper/testing_helper.rb",
+     "test/lib/generators/mongoid/install_generator_test.rb",
+     "test/lib/generators/mongoid/model_generator_test.rb",
+     "test/lib/generators/mongoid/testing_helper.rb",
      "test/lib/generators/mustache/controller_generator_test.rb",
      "test/lib/generators/mustache/scaffold_generator_test.rb",
+     "test/lib/generators/mustache/testing_helper.rb",
      "test/lib/generators/shoulda/controller_generator_test.rb",
      "test/lib/generators/simple_form/scaffold_generators_test.rb",
      "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/indirect/rails3-generators}
   s.post_install_message = %q{
-rails3-generators-0.10.3
+rails3-generators-0.11.0
 
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
+  
+note: ORM :datamapper has been renamed to :data_mapper
+note: ORM :mongomapper has been renamed to :mongo_mapper
 
 note: if you use erb templates add the follow to your generators block to take full advantage of this gem.
 g.template_engine :erubis
@@ -146,9 +170,9 @@ g.template_engine :erubis
   s.test_files = [
     "test/fixtures/routes.rb",
      "test/lib/generators/authlogic/session_generator_test.rb",
-     "test/lib/generators/datamapper/migration_generator_test.rb",
-     "test/lib/generators/datamapper/model_generator_test.rb",
-     "test/lib/generators/datamapper/observer_generator_test.rb",
+     "test/lib/generators/data_mapper/migration_generator_test.rb",
+     "test/lib/generators/data_mapper/model_generator_test.rb",
+     "test/lib/generators/data_mapper/observer_generator_test.rb",
      "test/lib/generators/erubis/controller_generator_test.rb",
      "test/lib/generators/erubis/scaffold_generator_test.rb",
      "test/lib/generators/factory_girl/model_generator_test.rb",
@@ -156,13 +180,20 @@ g.template_engine :erubis
      "test/lib/generators/haml/controller_generator_test.rb",
      "test/lib/generators/haml/install_generator_test.rb",
      "test/lib/generators/haml/scaffold_generator_test.rb",
+     "test/lib/generators/haml/testing_helper.rb",
      "test/lib/generators/jquery/install_generator_test.rb",
      "test/lib/generators/koala/install_generator_test.rb",
      "test/lib/generators/machinist/model_generator_test.rb",
-     "test/lib/generators/mongomapper/model_generator_test.rb",
-     "test/lib/generators/mongomapper/observer_generator_test.rb",
+     "test/lib/generators/mongo_mapper/install_generator_test.rb",
+     "test/lib/generators/mongo_mapper/model_generator_test.rb",
+     "test/lib/generators/mongo_mapper/observer_generator_test.rb",
+     "test/lib/generators/mongo_mapper/testing_helper.rb",
+     "test/lib/generators/mongoid/install_generator_test.rb",
+     "test/lib/generators/mongoid/model_generator_test.rb",
+     "test/lib/generators/mongoid/testing_helper.rb",
      "test/lib/generators/mustache/controller_generator_test.rb",
      "test/lib/generators/mustache/scaffold_generator_test.rb",
+     "test/lib/generators/mustache/testing_helper.rb",
      "test/lib/generators/shoulda/controller_generator_test.rb",
      "test/lib/generators/simple_form/scaffold_generators_test.rb",
      "test/test_helper.rb"
