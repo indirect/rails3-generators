@@ -4,6 +4,10 @@
 * Datamapper Tests
 * Mongomapper Tests
 
+== Master
+* optimize
+  * Update jquery install by removing unneeded initializer file
+
 == 0.10.3
 * optimize
   * add --extension option to machinist blueprints. (I like using ".blueprint". --Louis T.)

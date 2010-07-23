@@ -1,0 +1,10 @@
+
+===============================================================================
+
+Some manual steps you have to do
+
+  1. Uncomment or add the following to you application.rb file:
+  
+      config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+
+===============================================================================

@@ -10,7 +10,6 @@ class Jquery::Generators::InstallGeneratorTest < Rails::Generators::TestCase
   test 'jquery is installed' do
     run_generator
 
-    assert_file "config/initializers/jquery.rb"
     %w(jquery.js rails.js).each { |js| assert_file "public/javascripts/#{js}" }
     %w(controls.js dragdrop.js effects.js prototype.js).each { |js| assert_no_file "public/javascripts/#{js}" }
   end
