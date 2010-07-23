@@ -43,34 +43,37 @@ def assert_class(klass, content)
   yield $2.strip if block_given?
 end
 
-require 'rails/generators/rails/scaffold/scaffold_generator'
-require 'rails/generators/rails/controller/controller_generator'
+def generator_list
+  {
+    :rails        => ['scaffold', 'controller'],
+    :erubis       => ['scaffold'],
+    :simple_form  => ['scaffold'],
+    :formtastic   => ['scaffold'],
+    :factory_girl => ['model'],
+    :machinist    => ['model'],
+    :authlogic    => ['session'],
+    :jquery       => ['install'],
+    :koala        => ['install'], 
+    :shoulda      => ['controller']
+  }
+end
 
-# require 'generators/mustache/install/install_generator'
-require 'generators/mustache/scaffold/scaffold_generator'
-require 'generators/mustache/controller/controller_generator'
+def path_prefix(name)
+  case name
+  when :rails
+    'rails/generators'
+  else
+    'generators'     
+  end
+end
 
-require 'generators/haml/install/install_generator'
-require 'generators/haml/scaffold/scaffold_generator'
-require 'generators/haml/controller/controller_generator'
-require 'generators/erubis/scaffold/scaffold_generator'
+def require_generators(generator_list)
+  generator_list.each do |name, generators|
+    generators.each do |generator_name|
+      require File.join(path_prefix(name), name.to_s, generator_name.to_s, "#{generator_name}_generator")
+    end    
+  end
+end
+alias :require_generator :require_generators
 
-require 'generators/simple_form/scaffold/scaffold_generator'
-require 'generators/formtastic/scaffold/scaffold_generator'
-
-require 'generators/datamapper/migration/migration_generator'
-require 'generators/datamapper/model/model_generator'
-require 'generators/datamapper/observer/observer_generator'
-require 'generators/mongomapper/model/model_generator'
-require 'generators/mongomapper/observer/observer_generator'
-
-require 'generators/factory_girl/model/model_generator'
-require 'generators/machinist/model/model_generator'
-
-require 'generators/authlogic/session/session_generator'
-
-require 'generators/jquery/install/install_generator'
-
-require 'generators/koala/install/install_generator'
-
-require 'generators/shoulda/controller/controller_generator'
+require_generators generator_list

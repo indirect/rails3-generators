@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'lib/generators/mustache/testing_helper'
 
 class Mustache::Generators::ControllerGeneratorTest < Rails::Generators::TestCase
   destination File.join(Rails.root)
