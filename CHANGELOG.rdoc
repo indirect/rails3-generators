@@ -2,6 +2,10 @@
 * Grow Mustache up.(fix the TODOs and move the source to a mustache-rails like gem)
 * Write some documentation. (In both the github wiki and the source code)
 
+== Master
+* enhancements
+  * added jqueryui (ProGNOMmers [Maurizio])
+
 == 0.11.0
 * enhancements
   * Added new mongo_mapper generator for mongo mapper 0.8 with lots of extra features [Kristian Mandrup]

@@ -6,5 +6,11 @@ Some manual steps you have to do
   1. Uncomment or add the following to you application.rb file:
   
       config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+      
+      or if you used included jquery ui
+      
+      config.action_view.javascript_expansions[:defaults] = %w(jquery jqueryui rails)
+      
+  2. Rerun the generator to update the javascript files
 
 ===============================================================================
