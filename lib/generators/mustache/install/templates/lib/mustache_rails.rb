@@ -1,5 +1,3 @@
-require 'action_view'
-require 'active_support'
 require 'mustache'
 
 class Mustache
@@ -119,5 +117,5 @@ class Mustache
   end
 end
 
-::ActiveSupport::Dependencies.load_paths << Rails.root.join("app", "views")
+::ActiveSupport::Dependencies.autoload_paths += [Rails.root.join('app', 'views')]
 ::ActionView::Template.register_template_handler(:rb, Mustache::Rails::TemplateHandler)
