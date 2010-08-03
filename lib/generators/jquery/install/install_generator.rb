@@ -7,7 +7,11 @@ module Jquery
       class_option :jqueryui, :type => :boolean, :default => false, :desc => "Indicates when to Include JQueryUI (minified, source: Google Libraries API)"
 
       def copy_initializer_files
-        template "config/initializers/jquery.rb.tt", "config/initializers/jquery.rb"
+        if options.jqueryui?
+          template "config/initializers/jqueryui.rb.tt", "config/initializers/jquery.rb"
+        else
+          template "config/initializers/jquery.rb.tt", "config/initializers/jquery.rb"
+        end
       end
 
       def download_jquery_files
