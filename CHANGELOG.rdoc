@@ -2,7 +2,7 @@
 * Grow Mustache up.(fix the TODOs and move the source to a mustache-rails like gem)
 * Write some documentation. (In both the github wiki and the source code)
 
-== Master
+== 0.12.0
 * enhancements
   * added jqueryui (ProGNOMmers [Maurizio])
 
