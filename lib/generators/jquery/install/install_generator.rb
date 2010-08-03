@@ -4,15 +4,7 @@ module Jquery
   module Generators
     class InstallGenerator < Rails::Generators::Base
       extend TemplatePath
-      class_option :jqueryui, :type => :boolean, :default => false, :desc => "Indicates when to Include JQueryUI (minified version; source: Google Libraries API)"
-
-      def copy_initializer_files
-        if options.jqueryui?
-          template "config/initializers/jqueryui.rb.tt", "config/initializers/jquery.rb"
-        else
-          template "config/initializers/jquery.rb.tt", "config/initializers/jquery.rb"
-        end
-      end
+      class_option :ui, :type => :boolean, :default => false, :desc => "Indicates when to Include JQueryUI (minified version; source: Google Libraries API)"
 
       def download_jquery_files
         %w(controls.js dragdrop.js effects.js prototype.js rails.js).each do |prototype|
@@ -28,7 +20,7 @@ module Jquery
       
       def download_jqueryui_files
         # Downloading latest jQueryUI minified
-        get "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js", "public/javascripts/jqueryui.js" if options.jqueryui?
+        get "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js", "public/javascripts/jqueryui.js" if options.ui?
       end
     end
   end
