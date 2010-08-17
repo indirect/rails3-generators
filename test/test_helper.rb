@@ -1,4 +1,5 @@
 require 'rubygems'
+gem 'test-unit'
 require 'test/unit'
 require 'rails/all'
 require 'rails/generators'
@@ -53,7 +54,7 @@ def generator_list
     :machinist    => ['model'],
     :authlogic    => ['session'],
     :jquery       => ['install'],
-    :koala        => ['install'], 
+    :koala        => ['install'],
     :shoulda      => ['controller']
   }
 end
@@ -63,7 +64,7 @@ def path_prefix(name)
   when :rails
     'rails/generators'
   else
-    'generators'     
+    'generators'
   end
 end
 
@@ -71,7 +72,7 @@ def require_generators(generator_list)
   generator_list.each do |name, generators|
     generators.each do |generator_name|
       require File.join(path_prefix(name), name.to_s, generator_name.to_s, "#{generator_name}_generator")
-    end    
+    end
   end
 end
 alias :require_generator :require_generators
