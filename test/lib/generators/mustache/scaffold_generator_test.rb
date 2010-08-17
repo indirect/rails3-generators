@@ -45,17 +45,17 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   test "should place attribute tags in the mustache template for show action" do
     run_generator
     assert_file "app/templates/product_lines/show.html.mustache",
-                %r({{title}})
+                %r(\{\{title\}\})
     assert_file "app/templates/product_lines/show.html.mustache",
-                %r({{price}})
+                %r(\{\{price\}\})
   end
   
   test "should place tags for edit path and index path in the mustache template for show action" do
     run_generator
     assert_file "app/templates/product_lines/show.html.mustache",
-                %r({{edit_path}})
+                %r(\{\{edit_path\}\})
     assert_file "app/templates/product_lines/show.html.mustache",
-                %r({{index_path}})
+                %r(\{\{index_path\}\})
   end
   
   ### INDEX
@@ -75,29 +75,29 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   test "should place 'listing' loop tags in the mustache template for index action" do
     run_generator
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{#listing}})
+                %r(\{\{#listing\}\})
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{/listing}})
+                %r(\{\{/listing\}\})
   end
   
   test "should place a tag for each attribute in the mustache template for index action" do
     run_generator
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{title}})
+                %r(\{\{title\}\})
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{price}})
+                %r(\{\{price\}\})
   end
   
   test "should place a tag for the item's show link the mustache template for index action" do
     run_generator
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{show_path}})
+                %r(\{\{show_path\}\})
   end
   
   test "should place a tag for a new index link the mustache template for index action" do
     run_generator
     assert_file "app/templates/product_lines/index.html.mustache",
-                %r({{new_path}})
+                %r(\{\{new_path\}\})
   end
   
   
@@ -106,13 +106,13 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   test "should place attribute tags in the mustache template for form partial" do
     run_generator
     assert_file "app/templates/product_lines/_form.html.mustache",
-                %r({{title_label}})
+                %r(\{\{title_label\}\})
     assert_file "app/templates/product_lines/_form.html.mustache",
-                %r({{title_text_field}})
+                %r(\{\{title_text_field\}\})
     assert_file "app/templates/product_lines/_form.html.mustache",
-                %r({{price_text_field}})
+                %r(\{\{price_text_field\}\})
     assert_file "app/templates/product_lines/_form.html.mustache",
-                %r({{price_label}})
+                %r(\{\{price_label\}\})
   end
   
   
@@ -148,13 +148,13 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   test "should place a new form tag in the mustache template for new action" do
     run_generator
     assert_file "app/templates/product_lines/new.html.mustache",
-                %r({{product_line_form_tag}})
+                %r(\{\{product_line_form_tag\}\})
   end
   
   test "should place tags for index path in the mustache template for new action" do
     run_generator
     assert_file "app/templates/product_lines/new.html.mustache",
-                %r({{index_path}})
+                %r(\{\{index_path\}\})
   end
 
 
@@ -190,13 +190,13 @@ class Mustache::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
   test "should place a form tag in the mustache template for edit action" do
     run_generator
     assert_file "app/templates/product_lines/edit.html.mustache",
-                %r({{product_line_form_tag}})
+                %r(\{\{product_line_form_tag\}\})
   end
   
   test "should place tags for show path in the mustache template for edit action" do
     run_generator
     assert_file "app/templates/product_lines/edit.html.mustache",
-                %r({{show_path}})
+                %r(\{\{show_path\}\})
   end
   
 end
