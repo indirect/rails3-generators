@@ -14,6 +14,8 @@ and add the following to your project's Gemfile
 
 The Haml generators have moved to {the haml-rails gem}[http://github.com/indirect/haml-rails].
 
+The jQuery generators have moved to {the jquery-rails gem}[http://github.com/indirect/jquery-rails].
+
 To avoid overriding the rails built-in Erb template generators this project uses the namespace Erubis for *.erb templates
 
   config.generators do |g|

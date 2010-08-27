@@ -2,6 +2,11 @@
 * Grow Mustache up.(fix the TODOs and move the source to a mustache-rails like gem)
 * Write some documentation. (In both the github wiki and the source code)
 
+== 0.13.0
+* optimize
+  * The Haml generators have moved to {the haml-rails gem}[http://github.com/indirect/haml-rails].
+  * The jQuery generators have moved to {the jquery-rails gem}[http://github.com/indirect/jquery-rails].
+
 == 0.12.1
 * optimize
   * changed jqueryui option to --ui

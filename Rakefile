@@ -9,7 +9,7 @@ begin
       
     gem.name = "rails3-generators"
     gem.summary = %Q{Rails 3 compatible generators}
-    gem.description = %Q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic and SimpleForm}
+    gem.description = %Q{Rails 3 compatible generators for DataMapper, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic and SimpleForm}
     gem.email = "andre@arko.net"
     gem.homepage = "http://github.com/indirect/rails3-generators"
     gem.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson", "Kristian Mandrup"]
@@ -20,11 +20,8 @@ rails3-generators-#{version}
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
   
-note: ORM :datamapper has been renamed to :data_mapper
-note: ORM :mongomapper has been renamed to :mongo_mapper
-
-note: if you use erb templates add the follow to your generators block to take full advantage of this gem.
-g.template_engine :erubis
+The Haml generators have moved to {the haml-rails gem}[http://github.com/indirect/haml-rails].
+The jQuery generators have moved to {the jquery-rails gem}[http://github.com/indirect/jquery-rails].
 
 }
     
