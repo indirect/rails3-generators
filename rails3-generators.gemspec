@@ -5,19 +5,18 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.12.1"
+  s.version = "0.13.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson", "Kristian Mandrup"]
-  s.date = %q{2010-08-04}
-  s.description = %q{Rails 3 compatible generators for DataMapper, Haml, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic and SimpleForm}
+  s.date = %q{2010-08-26}
+  s.description = %q{Rails 3 compatible generators for DataMapper, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic and SimpleForm}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
-    ".bundle/config",
-     ".gitignore",
+    ".gitignore",
      "CHANGELOG.rdoc",
      "Gemfile",
      "README.rdoc",
@@ -50,22 +49,8 @@ Gem::Specification.new do |s|
      "lib/generators/formtastic/scaffold/scaffold_generator.rb",
      "lib/generators/formtastic/scaffold/templates/_form.html.erb.erb",
      "lib/generators/formtastic/scaffold/templates/_form.html.haml.erb",
-     "lib/generators/haml.rb",
-     "lib/generators/haml/controller/controller_generator.rb",
-     "lib/generators/haml/controller/templates/view.html.haml",
-     "lib/generators/haml/install/install_generator.rb",
-     "lib/generators/haml/install/templates/config/initializers/haml.rb.tt",
-     "lib/generators/haml/scaffold/scaffold_generator.rb",
-     "lib/generators/haml/scaffold/templates/_form.html.haml.erb",
-     "lib/generators/haml/scaffold/templates/edit.html.haml.erb",
-     "lib/generators/haml/scaffold/templates/index.html.haml.erb",
-     "lib/generators/haml/scaffold/templates/new.html.haml.erb",
-     "lib/generators/haml/scaffold/templates/show.html.haml.erb",
      "lib/generators/helpers/migration_helper.rb",
      "lib/generators/helpers/model_helper.rb",
-     "lib/generators/jquery.rb",
-     "lib/generators/jquery/install/install_generator.rb",
-     "lib/generators/jquery/install/templates/README",
      "lib/generators/koala.rb",
      "lib/generators/koala/install/install_generator.rb",
      "lib/generators/koala/install/templates/app/helpers/facebook_helper.rb.tt",
@@ -128,11 +113,6 @@ Gem::Specification.new do |s|
      "test/lib/generators/erubis/scaffold_generator_test.rb",
      "test/lib/generators/factory_girl/model_generator_test.rb",
      "test/lib/generators/formtastic/scaffold_generators_test.rb",
-     "test/lib/generators/haml/controller_generator_test.rb",
-     "test/lib/generators/haml/install_generator_test.rb",
-     "test/lib/generators/haml/scaffold_generator_test.rb",
-     "test/lib/generators/haml/testing_helper.rb",
-     "test/lib/generators/jquery/install_generator_test.rb",
      "test/lib/generators/koala/install_generator_test.rb",
      "test/lib/generators/machinist/model_generator_test.rb",
      "test/lib/generators/mongo_mapper/install_generator_test.rb",
@@ -151,16 +131,13 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://github.com/indirect/rails3-generators}
   s.post_install_message = %q{
-rails3-generators-0.12.1
+rails3-generators-0.13.0
 
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
   
-note: ORM :datamapper has been renamed to :data_mapper
-note: ORM :mongomapper has been renamed to :mongo_mapper
-
-note: if you use erb templates add the follow to your generators block to take full advantage of this gem.
-g.template_engine :erubis
+The Haml generators have moved to {the haml-rails gem}[http://github.com/indirect/haml-rails].
+The jQuery generators have moved to {the jquery-rails gem}[http://github.com/indirect/jquery-rails].
 
 }
   s.rdoc_options = ["--charset=UTF-8"]
@@ -177,11 +154,6 @@ g.template_engine :erubis
      "test/lib/generators/erubis/scaffold_generator_test.rb",
      "test/lib/generators/factory_girl/model_generator_test.rb",
      "test/lib/generators/formtastic/scaffold_generators_test.rb",
-     "test/lib/generators/haml/controller_generator_test.rb",
-     "test/lib/generators/haml/install_generator_test.rb",
-     "test/lib/generators/haml/scaffold_generator_test.rb",
-     "test/lib/generators/haml/testing_helper.rb",
-     "test/lib/generators/jquery/install_generator_test.rb",
      "test/lib/generators/koala/install_generator_test.rb",
      "test/lib/generators/machinist/model_generator_test.rb",
      "test/lib/generators/mongo_mapper/install_generator_test.rb",
