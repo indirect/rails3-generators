@@ -50,6 +50,7 @@ def generator_list
     :erubis       => ['scaffold'],
     :simple_form  => ['scaffold'],
     :formtastic   => ['scaffold'],
+    :fabrication  => ['model'],
     :factory_girl => ['model'],
     :machinist    => ['model'],
     :authlogic    => ['session'],

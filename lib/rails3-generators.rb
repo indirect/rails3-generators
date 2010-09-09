@@ -31,7 +31,7 @@ end
   ]
 end
 
-%w(factory_girl machinist).each do |fixture_replacement|
+%w(fabrication factory_girl machinist).each do |fixture_replacement|
   Rails::Generators.hidden_namespaces <<
   [
     "#{fixture_replacement}:model",

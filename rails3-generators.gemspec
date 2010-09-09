@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rails3-generators}
-  s.version = "0.13.0"
+  s.version = "0.14.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson", "Kristian Mandrup"]
-  s.date = %q{2010-08-26}
-  s.description = %q{Rails 3 compatible generators for DataMapper, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic and SimpleForm}
+  s.authors = ["Jose Valim", "Anuj Dutta", "Paul Berry", "Jeff Tucker", "Louis T.", "Jai-Gouk Kim", "Darcy Laycock", "Peter Haza", "Peter Gumeson", "Kristian Mandrup", "Alejandro Juarez"]
+  s.date = %q{2010-09-09}
+  s.description = %q{Rails 3 compatible generators for DataMapper, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic, SimpleForm and Fabrication}
   s.email = %q{andre@arko.net}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -42,6 +42,9 @@ Gem::Specification.new do |s|
      "lib/generators/erubis/scaffold/templates/index.html.erb",
      "lib/generators/erubis/scaffold/templates/new.html.erb",
      "lib/generators/erubis/scaffold/templates/show.html.erb",
+     "lib/generators/fabrication.rb",
+     "lib/generators/fabrication/model/model_generator.rb",
+     "lib/generators/fabrication/model/templates/fabricator.rb",
      "lib/generators/factory_girl.rb",
      "lib/generators/factory_girl/model/model_generator.rb",
      "lib/generators/factory_girl/model/templates/fixtures.rb",
@@ -111,6 +114,7 @@ Gem::Specification.new do |s|
      "test/lib/generators/data_mapper/observer_generator_test.rb",
      "test/lib/generators/erubis/controller_generator_test.rb",
      "test/lib/generators/erubis/scaffold_generator_test.rb",
+     "test/lib/generators/fabrication/model_generator_test.rb",
      "test/lib/generators/factory_girl/model_generator_test.rb",
      "test/lib/generators/formtastic/scaffold_generators_test.rb",
      "test/lib/generators/koala/install_generator_test.rb",
@@ -131,7 +135,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://github.com/indirect/rails3-generators}
   s.post_install_message = %q{
-rails3-generators-0.13.0
+rails3-generators-0.14.0
 
 Be sure to check out the wiki, http://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
@@ -152,6 +156,7 @@ The jQuery generators have moved to {the jquery-rails gem}[http://github.com/ind
      "test/lib/generators/data_mapper/observer_generator_test.rb",
      "test/lib/generators/erubis/controller_generator_test.rb",
      "test/lib/generators/erubis/scaffold_generator_test.rb",
+     "test/lib/generators/fabrication/model_generator_test.rb",
      "test/lib/generators/factory_girl/model_generator_test.rb",
      "test/lib/generators/formtastic/scaffold_generators_test.rb",
      "test/lib/generators/koala/install_generator_test.rb",
