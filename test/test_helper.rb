@@ -54,7 +54,6 @@ def generator_list
     :factory_girl => ['model'],
     :machinist    => ['model'],
     :authlogic    => ['session'],
-    :jquery       => ['install'],
     :koala        => ['install'],
     :shoulda      => ['controller']
   }
