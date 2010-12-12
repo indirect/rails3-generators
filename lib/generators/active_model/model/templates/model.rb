@@ -1,7 +1,7 @@
 class <%= class_name %>
   include ActiveModel::Serialization
   include ActiveModel::Validations
-<%= attributes %>
+
   <% if read_properties? %>
     attr_reader <%= read_properties %>
   <% end %>
