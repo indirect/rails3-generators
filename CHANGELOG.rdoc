@@ -1,12 +1,13 @@
 == TODO
 * Grow Mustache up.(fix the TODOs and move the source to a mustache-rails like gem)
 * Write some documentation. (In both the github wiki and the source code)
-* remove generators that exist in other libraries (mongoid and mustache to name a few)
+* remove generators that exist in other libraries
 
 == 0.16.0
 * optimize
   * Machinist generators removed. Machinist 2 (https://github.com/notahat/machinist) has its own generators.
   * Fabrication generators removed. Fabrication (https://github.com/paulelliott/fabrication) has its own generators.
+  * Mongoid generators removed. Mongoid (https://github.com/mongoid/mongoid) has its own generators.
 
 == 0.15.0
 * optimize

@@ -34,5 +34,7 @@ for information about recent changes to this project.
 Machinist generators have been removed. Please update your project to use Machinist 2 (https://github.com/notahat/machinist) which contains its own generators.
 
 Fabrication generators have been removed. Please update your project to use Fabrication (https://github.com/paulelliott/fabrication) which contains its own generators.
+
+Mongoid generators have been removed. Please update your project to use Mongoid (https://github.com/mongoid/mongoid) which contains its own generators.
 }
 end
