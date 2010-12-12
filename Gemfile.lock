@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    rails3-generators (0.16.0.beta)
-      rails (>= 3.0.0)
+    rails3-generators (0.16.1)
+      railties (>= 3.0.0)
 
 GEM
   remote: http://rubygems.org/
@@ -85,4 +85,5 @@ DEPENDENCIES
   haml-rails
   rails (>= 3.0.0)
   rails3-generators!
+  railties (>= 3.0.0)
   test-unit
