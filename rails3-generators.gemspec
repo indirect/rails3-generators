@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email = 'andre@arko.net'
   s.homepage = 'https://github.com/indirect/rails3-generators'
   s.summary = 'Rails 3 compatible generators'
-  s.description = 'Rails 3 compatible generators for DataMapper, Factory-girl, Authlogic, Mongomapper, Mongoid, Shoulda, Formtastic, SimpleForm and Fabrication'
+  s.description = "Rails 3 compatible generators for gems that don't have them yet "
 
   s.rubyforge_project         = 'rails3-generators'
   s.required_rubygems_version = ">= 1.3.6"
@@ -31,6 +31,8 @@ rails3-generators-#{Rails3::Generators::VERSION}
 Be sure to check out the wiki, https://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
 
-machinist geberators have been removed. Please update your project to use Machinist 2 (https://github.com/notahat/machinist) which contains its own generators.
+Machinist generators have been removed. Please update your project to use Machinist 2 (https://github.com/notahat/machinist) which contains its own generators.
+
+Fabrication generators have been removed. Please update your project to use Fabrication (https://github.com/paulelliott/fabrication) which contains its own generators.
 }
 end
