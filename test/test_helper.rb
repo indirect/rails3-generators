@@ -53,7 +53,6 @@ def generator_list
     :formtastic   => ['scaffold'],
     :fabrication  => ['model'],
     :factory_girl => ['model'],
-    :machinist    => ['model'],
     :authlogic    => ['session'],
     :koala        => ['install'],
     :shoulda      => ['controller']

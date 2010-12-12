@@ -3,6 +3,10 @@
 * Write some documentation. (In both the github wiki and the source code)
 * remove generators that exist in other libraries (mongoid, mustache, and fabricator to name a few)
 
+== 0.16.0
+* optimize
+  * Machinist removed. Machinist 2 (https://github.com/notahat/machinist) has its own generators.
+
 == 0.15.0
 * optimize
   * Use bundler, remove Jeweler.

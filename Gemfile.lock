@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails3-generators (0.14.0)
+    rails3-generators (0.16.0)
       rails (>= 3.0.0)
 
 GEM
