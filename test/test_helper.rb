@@ -1,5 +1,6 @@
-require 'rubygems'
-gem 'test-unit'
+require 'bundler'
+Bundler.require
+
 require 'test/unit'
 require 'rails/all'
 require 'rails/generators'
