@@ -2,6 +2,19 @@
 * Write some documentation. (In both the github wiki and the source code)
 * Remove generators that exist in other libraries
 
+== 0.17.0.beta.1
+* enhancements
+  * Added a generator for creating models with no persistent.
+    They still include ActiveModel::Validations and ActiveModel::Serialization.
+    
+    When generating properties you can use the following as types to create the required accessor
+    
+    read  - generate read_accessor
+    write - generate write_accessor
+    all   - generate attr_accessor
+    
+    (Colin Gemmel)
+
 == 0.16.0
 * optimize
   * Machinist generators removed. Machinist 2 (https://github.com/notahat/machinist) has its own generators.
