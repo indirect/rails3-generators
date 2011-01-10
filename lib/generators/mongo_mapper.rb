@@ -17,7 +17,7 @@ module MongoMapper
       end
 
       def self.find(klass, params=nil)
-        "#{klass}.first(#{params})"
+        "#{klass}.find(#{params})"
       end
 
       def self.build(klass, params=nil)
