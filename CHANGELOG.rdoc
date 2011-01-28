@@ -2,6 +2,10 @@
 * Write some documentation. (In both the github wiki and the source code)
 * Remove generators that exist in other libraries
 
+== 0.17.3
+* optimize
+  * Update FactoryGirl generator to use version 2.0.0 syntax (Kevin Faustino)
+
 == 0.17.2
 * optimize
   * Documentation on how to use a generator{factory_girl} (John Joseph Bachir)
