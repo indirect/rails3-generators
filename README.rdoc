@@ -42,12 +42,12 @@ To avoid overriding the rails built-in Erb template generators this project uses
 
 == Contributors
 
-DataMapper: José Valim
-Factory Girl: Paul Barry
-Authlogic: Jeff Tucker
-Mongomapper: Jai-Gouk Kim
-MongoMapper: Kristian Mandrup (for 0.8) - needs testing
-Shoulda: Peter Haza
-SimpleForm: Peter Gumeson
+* DataMapper: José Valim
+* Factory Girl: Paul Barry
+* Authlogic: Jeff Tucker
+* Mongomapper: Jai-Gouk Kim
+* MongoMapper: Kristian Mandrup (for 0.8) - needs testing
+* Shoulda: Peter Haza
+* SimpleForm: Peter Gumeson
 
 and more[http://github.com/indirect/rails3-generators/contributors]
