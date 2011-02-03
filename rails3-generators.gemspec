@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "test-unit"
   s.add_development_dependency "haml-rails"
   s.add_development_dependency "rails", ">= 3.0.0"
+  s.add_development_dependency "factory_girl"
   
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").select{|f| f =~ /^bin/}
