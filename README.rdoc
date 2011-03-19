@@ -51,3 +51,7 @@ To avoid overriding the rails built-in Erb template generators this project uses
 * SimpleForm: Peter Gumeson
 
 and more[http://github.com/indirect/rails3-generators/contributors]
+
+==License
+
+Ruby license or MIT license, take your pick
