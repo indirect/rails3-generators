@@ -54,7 +54,7 @@ def generator_list
     :factory_girl => ['model'],
     :authlogic    => ['session'],
     :koala        => ['install'],
-    :shoulda      => ['controller']
+    :shoulda      => ['controller', 'scaffold']
   }
 end
 
