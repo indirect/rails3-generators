@@ -51,7 +51,6 @@ def generator_list
     :erubis       => ['scaffold'],
     :simple_form  => ['scaffold'],
     :formtastic   => ['scaffold'],
-    :factory_girl => ['model'],
     :authlogic    => ['session'],
     :koala        => ['install'],
     :shoulda      => ['controller', 'scaffold']
