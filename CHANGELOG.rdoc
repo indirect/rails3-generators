@@ -19,17 +19,17 @@
   * MongoMapper provides find(id), not first(id).
     See http://stackoverflow.com/questions/4646745 (Semyon Perepelitsa)
 
-== 0.17.0 
+== 0.17.0
 * enhancements
   * Added a generator for creating models with no persistent.
     They still include ActiveModel::Validations and ActiveModel::Serialization.
-    
+
     When generating properties you can use the following as types to create the required accessor
-    
+
     read  - generate read_accessor
     write - generate write_accessor
     all   - generate attr_accessor
-    
+
     (Colin Gemmel)
 
 == 0.16.0
@@ -48,7 +48,7 @@
 == 0.14.0
 * enhancements
   * added Fabricator
-      
+
 == 0.13.0
 * optimize
   * The Haml generators have moved to {the haml-rails gem}[http://github.com/indirect/haml-rails].
@@ -66,11 +66,11 @@
 * enhancements
   * Added new mongo_mapper generator for mongo mapper 0.8 with lots of extra features [Kristian Mandrup]
   * Added mongoid generator for mongoid 2.0.beta with features similar to new mongo_mapper [Kristian Mandrup]
-  
+
 * optimize
   * renamed datamapper to data_mapper
   * renamed mongomapper to mongo_mapper.
-  
+
 * fix
   * added DataMapper Tests
   * added MongoMapper Tests
@@ -93,7 +93,7 @@
   * added mustache:install
   * added mustache:controller
   * added mustache:scaffold
-  
+
 * fix
   * fixed shoulda controller CamelCase problem.
 

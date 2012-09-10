@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    rails3-generators (0.17.3)
+    rails3-generators (0.17.4)
       railties (>= 3.0.0)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     abstract (1.0.0)
     actionmailer (3.0.3)
@@ -87,4 +87,5 @@ DEPENDENCIES
   haml-rails
   rails (>= 3.0.0)
   rails3-generators!
+  rake
   test-unit

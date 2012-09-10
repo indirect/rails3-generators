@@ -8,7 +8,7 @@ Rails 3 compatible generators for gems that don't have them yet
 
 and add the following to your project's Gemfile
 
-  gem 'rails3-generators'
+  gem "rails3-generators"
 
 == Notes/Use
 
@@ -45,6 +45,6 @@ To avoid overriding the rails built-in Erb template generators this project uses
 
 and more[http://github.com/indirect/rails3-generators/contributors]
 
-==License
+== License
 
 Ruby license or MIT license, take your pick
