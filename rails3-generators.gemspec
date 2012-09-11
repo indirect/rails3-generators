@@ -33,6 +33,8 @@ rails3-generators-#{Rails3::Generators::VERSION}
 
 MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
 
+SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simple_form) has its onw generators.
+
 Be sure to check out the wiki, https://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
 }
