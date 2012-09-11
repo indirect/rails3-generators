@@ -2,6 +2,10 @@
 * Write some documentation. (In both the github wiki and the source code)
 * Remove generators that exist in other libraries
 
+== Development
+* optimize
+  * MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
+
 == 0.17.5
 * optimize
 	* Remove FactoryGirl
