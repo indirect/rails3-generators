@@ -31,6 +31,8 @@ Gem::Specification.new do |s|
   s.post_install_message = %Q{
 rails3-generators-#{Rails3::Generators::VERSION}
 
+MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
+
 Be sure to check out the wiki, https://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
 }

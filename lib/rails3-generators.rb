@@ -5,7 +5,7 @@ end
 
 Rails::Generators.hidden_namespaces << "rails"
 
-%w(active_record data_mapper mongo_mapper mongoid active_model).each do |orm|
+%w(active_record data_mapper active_model).each do |orm|
   Rails::Generators.hidden_namespaces <<
   [
     "#{orm}:migration",
