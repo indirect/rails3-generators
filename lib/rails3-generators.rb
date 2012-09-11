@@ -47,11 +47,4 @@ end
   ]
 end
 
-%w(formtastic).each do |form_builder|
-  Rails::Generators.hidden_namespaces <<
-  [
-    "#{form_builder}:scaffold"
-  ]
-end
-
 Rails::Generators.hidden_namespaces.flatten!
