@@ -1,4 +1,4 @@
-require 'rails/generators'
+require "rails/generators"
 
 module Rails3Generators
 end

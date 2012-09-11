@@ -24,6 +24,8 @@ The SimpleForm generators moved to {the simple_form gem}[https://github.com/plat
 
 The Formtastic generators moved to {the fortastic gem}[https://github.com/justinfrench/formtastic].
 
+The Authlogic generators moved to {the authlogic gem}[https://github.com/binarylogic/authlogic].
+
 == Note on Patches/Pull Requests
 
 * Fork the project.

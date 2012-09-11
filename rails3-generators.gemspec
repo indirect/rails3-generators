@@ -36,6 +36,8 @@ SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simp
 
 Formtastic generators removed. Formtastic (https://github.com/justinfrench/formtastic) has its onw generators.
 
+Authlogic generators removed. Authlogic (https://github.com/binarylogic/authlogic) has its onw generators.
+
 Be sure to check out the wiki, https://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
 }
