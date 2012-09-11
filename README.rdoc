@@ -22,6 +22,8 @@ The MongoMapper generators moved to {the mongo_mapper gem}[https://github.com/jn
 
 The SimpleForm generators moved to {the simple_form gem}[https://github.com/plataformatec/simple_form].
 
+The Formtastic generators moved to {the fortastic gem}[https://github.com/justinfrench/formtastic].
+
 == Note on Patches/Pull Requests
 
 * Fork the project.
