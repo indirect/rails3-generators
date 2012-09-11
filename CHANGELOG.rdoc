@@ -7,6 +7,7 @@
   * MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
   * SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simple_form) has its own generators.
 	* Erubis generator removed.
+  * Formtastic generators removed. Formtastic (https://github.com/justinfrench/formtastic) has its own generators.
 
 == 0.17.5
 * optimize
