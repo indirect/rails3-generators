@@ -38,7 +38,7 @@ end
   ]
 end
 
-%w(erb erubis haml mustache).each do |template|
+%w(erb haml mustache).each do |template|
   Rails::Generators.hidden_namespaces <<
   [
     "#{template}:controller",

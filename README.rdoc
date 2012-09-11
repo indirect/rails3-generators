@@ -22,12 +22,6 @@ The MongoMapper generators moved to {the mongo_mapper gem}[https://github.com/jn
 
 The SimpleForm generators moved to {the simple_form gem}[https://github.com/plataformatec/simple_form].
 
-To avoid overriding the rails built-in Erb template generators this project uses the namespace Erubis for *.erb templates
-
-  config.generators do |g|
-    g.template_engine  :erubis
-  end
-
 == Note on Patches/Pull Requests
 
 * Fork the project.
