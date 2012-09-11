@@ -5,6 +5,7 @@
 == Development
 * optimize
   * MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
+  * SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simple_form) has its own generators.
 
 == 0.17.5
 * optimize

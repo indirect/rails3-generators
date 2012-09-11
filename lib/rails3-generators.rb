@@ -47,7 +47,7 @@ end
   ]
 end
 
-%w(formtastic simple_form).each do |form_builder|
+%w(formtastic).each do |form_builder|
   Rails::Generators.hidden_namespaces <<
   [
     "#{form_builder}:scaffold"

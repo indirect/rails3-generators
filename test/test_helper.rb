@@ -49,7 +49,6 @@ def generator_list
   {
     :rails        => ['scaffold', 'controller'],
     :erubis       => ['scaffold'],
-    :simple_form  => ['scaffold'],
     :formtastic   => ['scaffold'],
     :authlogic    => ['session'],
     :koala        => ['install'],

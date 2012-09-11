@@ -20,6 +20,8 @@ The jQuery generators have moved to {the jquery-rails gem}[http://github.com/ind
 
 The MongoMapper generators moved to {the mongo_mapper gem}[https://github.com/jnunemaker/mongomapper].
 
+The SimpleForm generators moved to {the simple_form gem}[https://github.com/plataformatec/simple_form].
+
 To avoid overriding the rails built-in Erb template generators this project uses the namespace Erubis for *.erb templates
 
   config.generators do |g|
