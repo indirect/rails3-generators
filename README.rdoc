@@ -39,9 +39,7 @@ The Authlogic generators moved to {the authlogic gem}[https://github.com/binaryl
 == Contributors
 
 * DataMapper: José Valim
-* Authlogic: Jeff Tucker
 * Shoulda: Peter Haza
-* SimpleForm: Peter Gumeson
 
 and more[http://github.com/indirect/rails3-generators/contributors]
 

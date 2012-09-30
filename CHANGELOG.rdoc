@@ -1,8 +1,7 @@
 == TODO
 * Write some documentation. (In both the github wiki and the source code)
-* Remove generators that exist in other libraries
 
-== Development
+== 1.0.0
 * optimize
   * MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
   * SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simple_form) has its own generators.
