@@ -1,4 +1,4 @@
-require 'rails/generators'
+require "rails/generators"
 
 module Rails3Generators
 end
@@ -38,19 +38,12 @@ end
   ]
 end
 
-%w(erb erubis haml mustache).each do |template|
+%w(erb haml mustache).each do |template|
   Rails::Generators.hidden_namespaces <<
   [
     "#{template}:controller",
     "#{template}:scaffold",
     "#{template}:mailer"
-  ]
-end
-
-%w(formtastic simple_form).each do |form_builder|
-  Rails::Generators.hidden_namespaces <<
-  [
-    "#{form_builder}:scaffold"
   ]
 end
 
