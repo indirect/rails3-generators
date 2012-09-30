@@ -18,10 +18,6 @@ module Rails
 end
 Rails.application.config.root = Rails.root
 
-# Call configure to load the settings from
-# Rails.application.config.generators to Rails::Generators
-Rails::Generators.configure!
-
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 def copy_routes
@@ -48,10 +44,6 @@ end
 def generator_list
   {
     :rails        => ['scaffold', 'controller'],
-    :erubis       => ['scaffold'],
-    :simple_form  => ['scaffold'],
-    :formtastic   => ['scaffold'],
-    :authlogic    => ['session'],
     :koala        => ['install'],
     :shoulda      => ['controller', 'scaffold']
   }

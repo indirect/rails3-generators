@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "bundler", ">= 1.0.0"
   s.add_development_dependency "rake"
   s.add_development_dependency "test-unit"
-  s.add_development_dependency "haml-rails"
   s.add_development_dependency "rails", ">= 3.0.0"
   s.add_development_dependency "factory_girl"
 
@@ -32,6 +31,12 @@ Gem::Specification.new do |s|
 rails3-generators-#{Rails3::Generators::VERSION}
 
 MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
+
+SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simple_form) has its onw generators.
+
+Formtastic generators removed. Formtastic (https://github.com/justinfrench/formtastic) has its onw generators.
+
+Authlogic generators removed. Authlogic (https://github.com/binarylogic/authlogic) has its onw generators.
 
 Be sure to check out the wiki, https://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
