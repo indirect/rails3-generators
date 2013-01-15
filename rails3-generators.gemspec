@@ -32,11 +32,11 @@ rails3-generators-#{Rails3::Generators::VERSION}
 
 MongoMapper generators removed. MongoMapper (https://github.com/jnunemaker/mongomapper) has its own generators.
 
-SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simple_form) has its onw generators.
+SimpleForm generators removed. SimpleForm (https://github.com/plataformatec/simple_form) has its own generators.
 
-Formtastic generators removed. Formtastic (https://github.com/justinfrench/formtastic) has its onw generators.
+Formtastic generators removed. Formtastic (https://github.com/justinfrench/formtastic) has its own generators.
 
-Authlogic generators removed. Authlogic (https://github.com/binarylogic/authlogic) has its onw generators.
+Authlogic generators removed. Authlogic (https://github.com/binarylogic/authlogic) has its own generators.
 
 Be sure to check out the wiki, https://wiki.github.com/indirect/rails3-generators/,
 for information about recent changes to this project.
