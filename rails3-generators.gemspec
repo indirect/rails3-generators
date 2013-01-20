@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email = "andre@arko.net"
   s.homepage = "https://github.com/indirect/rails3-generators"
   s.summary = "Rails 3 compatible generators"
-  s.description = "Rails 3 compatible generators for gems that don't have them yet "
+  s.description = "Rails 3 compatible generators for gems that don't have them yet"
 
   s.rubyforge_project         = "rails3-generators"
   s.required_rubygems_version = ">= 1.3.6"
